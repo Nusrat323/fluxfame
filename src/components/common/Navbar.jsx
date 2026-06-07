@@ -5,16 +5,15 @@ import { FaBars, FaTimes } from "react-icons/fa";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
 
   const closeMenu = () => setMenuOpen(false);
 
-  
   const goToSection = (id) => {
     navigate("/");
-
     setActive(id);
     closeMenu();
 
@@ -34,10 +33,17 @@ export default function Navbar() {
     requestAnimationFrame(scrollToTarget);
   };
 
-  
+ 
   useEffect(() => {
     const handleScroll = () => {
       if (menuOpen) setMenuOpen(false);
+
+      
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
 
       if (location.pathname !== "/") return;
 
@@ -63,7 +69,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [menuOpen, location.pathname]);
 
-  
   useEffect(() => {
     if (location.pathname === "/") setActive("home");
     else if (location.pathname === "/about") setActive("about");
@@ -71,12 +76,11 @@ export default function Navbar() {
     else if (location.pathname === "/case-studies") setActive("case-studies");
   }, [location.pathname]);
 
-  // Nav Item
   const NavItem = ({ id, to, onClick, children }) => {
     const isActive = active === id;
 
     const base =
-      "relative text-sm font-medium transition duration-300 hover:text-lime-400";
+      "relative text-sm font-medium transition duration-300 hover:text-lime-400 text-white";
 
     const underline =
       "absolute left-0 -bottom-1 h-[2px] bg-lime-400 rounded-full transition-all duration-300";
@@ -107,16 +111,29 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-5">
+    <header className="fixed top-0 left-0 right-0 z-50 py-5 transition-all duration-300">
+
       <div className="container-custom">
 
         {/* NAVBAR */}
-        <div className="relative glass rounded-full px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div
+          className={`
+            relative rounded-full px-6 lg:px-8 py-4 flex items-center justify-between
+
+            transition-all duration-300
+
+            ${
+              scrolled
+                ? "bg-black/60 backdrop-blur-2xl border border-white/10 shadow-lg"
+                : "bg-white/5 backdrop-blur-xl border border-white/10"
+            }
+          `}
+        >
 
           {/* LOGO */}
           <button
             onClick={() => goToSection("home")}
-            className="text-2xl font-bold shrink-0"
+            className="text-2xl font-bold shrink-0 text-white"
           >
             Flux<span className="text-lime-400">Fame</span>
           </button>
@@ -153,7 +170,7 @@ export default function Navbar() {
           {/* MOBILE BUTTON */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-lime-400"
+            className="lg:hidden w-11 h-11 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-lime-400"
           >
             {menuOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
           </button>
@@ -163,61 +180,38 @@ export default function Navbar() {
         {/* MOBILE MENU */}
         {menuOpen && (
           <>
-            <div
-              className="fixed inset-0 z-40"
-              onClick={() => setMenuOpen(false)}
-            />
+            <div className="fixed inset-0 z-40" onClick={() => setMenuOpen(false)} />
 
-            <div className="lg:hidden mt-3 glass rounded-2xl overflow-hidden relative z-50">
+            <div className="lg:hidden mt-3 bg-black/80 backdrop-blur-xl rounded-2xl overflow-hidden relative z-50 border border-white/10">
 
-              <nav className="flex flex-col text-base font-medium">
+              <nav className="flex flex-col text-base font-medium text-white">
 
-                <button
-                  onClick={() => goToSection("home")}
-                  className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400"
-                >
+                <button onClick={() => goToSection("home")} className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400">
                   Home
                 </button>
 
-                <button
-                  onClick={() => goToSection("services")}
-                  className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400"
-                >
+                <button onClick={() => goToSection("services")} className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400">
                   Services
                 </button>
 
-                <Link
-                  to="/case-studies"
-                  onClick={closeMenu}
-                  className="px-6 py-4 border-b border-white/5 hover:text-lime-400"
-                >
+                <Link to="/case-studies" onClick={closeMenu} className="px-6 py-4 border-b border-white/5 hover:text-lime-400">
                   Case Studies
                 </Link>
 
-                <button
-                  onClick={() => goToSection("process")}
-                  className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400"
-                >
+                <button onClick={() => goToSection("process")} className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400">
                   Process
                 </button>
 
-                <Link
-                  to="/about"
-                  onClick={closeMenu}
-                  className="px-6 py-4 border-b border-white/5 hover:text-lime-400"
-                >
+                <Link to="/about" onClick={closeMenu} className="px-6 py-4 border-b border-white/5 hover:text-lime-400">
                   About
                 </Link>
 
-                <Link
-                  to="/contact"
-                  onClick={closeMenu}
-                  className="px-6 py-4 hover:text-lime-400"
-                >
+                <Link to="/contact" onClick={closeMenu} className="px-6 py-4 hover:text-lime-400">
                   Contact
                 </Link>
 
               </nav>
+
             </div>
           </>
         )}
