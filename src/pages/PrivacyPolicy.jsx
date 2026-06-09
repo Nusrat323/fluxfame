@@ -64,7 +64,7 @@ export default function PrivacyPolicy() {
 
         <p className="leading-relaxed">
           If you have any questions about this Privacy Policy, contact us at{" "}
-          <span className="text-lime-400">fluxfame@gmail.com</span>.
+          <span className="text-lime-400">fluxfame01@gmail.com</span>.
         </p>
 
       </section>

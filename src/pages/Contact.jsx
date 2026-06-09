@@ -6,6 +6,7 @@ import {
   FaMapMarkerAlt,
   FaFacebook,
   FaWhatsapp,
+  FaInstagram,
 } from "react-icons/fa";
 
 export default function Contact() {
@@ -96,7 +97,7 @@ export default function Contact() {
                 <h3 className="font-semibold">Email</h3>
               </div>
               <p className="text-gray-400 mt-2">
-                fluxfame@gmail.com
+                fluxfame01@gmail.com
               </p>
             </a>
 
@@ -116,19 +117,20 @@ export default function Contact() {
               </p>
             </a>
 
-            {/* FACEBOOK */}
+            {/* instagram */}
             <a
-              href="https://facebook.com/fluxfame"
+              href="https://www.instagram.com/fluxfame01"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass p-6 rounded-2xl border border-white/10 block hover:border-lime-400/40 transition"
+              className="glass p-6 rounded-2xl border border-white/10 block
+               hover:border-lime-400/40 transition"
             >
               <div className="flex items-center gap-3">
-                <FaFacebook className="text-lime-400" />
-                <h3 className="font-semibold">Facebook</h3>
+                <FaInstagram className="text-lime-400" />
+                <h3 className="font-semibold">Instagram</h3>
               </div>
               <p className="text-gray-400 mt-2">
-                Visit Facebook Page
+                Visit Instagram Page
               </p>
             </a>
 

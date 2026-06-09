@@ -131,13 +131,20 @@ export default function Navbar() {
         >
 
           {/* LOGO */}
-          <button
-            onClick={() => goToSection("home")}
-            className="text-2xl font-bold shrink-0 text-white"
-          >
-            Flux<span className="text-lime-400">Fame</span>
-          </button>
+<button
+  onClick={() => goToSection("home")}
+  className="flex items-center gap-2 shrink-0"
+>
+  <img
+    src="/fluxfame-favicon.ico"
+    alt="FluxFame Logo"
+    className="w-7 h-7 object-contain"
+  />
 
+  <span className="text-2xl font-bold text-white">
+    Flux<span className="text-lime-400">Fame</span>
+  </span>
+</button>
           {/* DESKTOP */}
           <nav className="hidden lg:flex items-center gap-8">
 

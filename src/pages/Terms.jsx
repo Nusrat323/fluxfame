@@ -70,7 +70,7 @@ export default function Terms() {
 
         <p className="leading-relaxed">
           For questions about these Terms, contact{" "}
-          <span className="text-lime-400">fluxfame@gmail.com</span>.
+          <span className="text-lime-400">fluxfame01@gmail.com</span>.
         </p>
 
       </section>

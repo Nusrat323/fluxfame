@@ -3,6 +3,7 @@ import {
   FaEnvelope,
   FaWhatsapp,
   FaMapMarkerAlt,
+  FaInstagram,
 } from "react-icons/fa";
 
 import {
@@ -48,18 +49,24 @@ export default function Footer() {
         {/* FOOTER GRID */}
         <div className="grid lg:grid-cols-3 gap-12">
 
-          {/* BRAND */}
-          <div>
-            <h3 className="text-3xl font-black">
-              Flux<span className="text-lime-400">Fame</span>
-            </h3>
+            {/* BRAND */}
+<div className="flex flex-col items-center text-center">
+  <img
+    src="/fluxfame-favicon.ico"
+    alt="FluxFame Logo"
+    className="w-9 h-9 mb-1 object-contain"
+  />
 
-            <p className="text-gray-300 text-sm leading-relaxed mt-5 max-w-md">
-              We help businesses automate lead generation,
-              appointment booking and customer communication
-              using AI-powered systems and GoHighLevel.
-            </p>
-          </div>
+  <h3 className="text-3xl font-black">
+    Flux<span className="text-lime-400">Fame</span>
+  </h3>
+
+  <p className="text-gray-300 text-sm leading-relaxed mt-5 max-w-md">
+    We help businesses automate lead generation,
+    appointment booking and customer communication
+    using AI-powered systems and GoHighLevel.
+  </p>
+</div>
 
           {/* NAVIGATION */}
           <div>
@@ -95,44 +102,115 @@ export default function Footer() {
           </div>
 
           {/* CONTACT */}
-          <div>
-            <h4 className="font-semibold mb-5 text-white">
-              Let's Talk
-            </h4>
 
-            <div className="space-y-3 text-sm">
+<div>
 
-              <a href="mailto:fluxfame@gmail.com" className="flex items-center gap-3 text-gray-300 hover:text-lime-400 transition">
-                <FaEnvelope className="text-lime-400" />
-                fluxfame@gmail.com
-              </a>
+<h4 className="font-semibold mb-5 text-white">
+  Let's Talk
+</h4>
 
-              <a href="https://wa.me/8801XXXXXXXXX" className="flex items-center gap-3 text-gray-300 hover:text-lime-400 transition">
-                <FaWhatsapp className="text-lime-400" />
-                Chat on WhatsApp
-              </a>
+<div className="space-y-3 text-sm">
 
-              <div className="flex items-center gap-3 text-gray-300">
-                <FaMapMarkerAlt className="text-lime-400" />
-                USA • Serving Clients Worldwide
-              </div>
+  {/* EMAIL */}
 
-            </div>
+  <a
+    href="mailto:fluxfame01@gmail.com"
+    className="
+      flex
+      items-center
+      gap-3
 
-            <a
-              href="/contact"
-              className="
-                mt-6 inline-flex items-center gap-2
-                bg-lime-400 text-black font-semibold
-                px-5 py-3 rounded-xl
-                hover:scale-105 transition-all
-              "
-            >
-              Contact Us
-              <FaArrowRight />
-            </a>
-          </div>
+      text-gray-300
+      hover:text-lime-400
 
+      transition
+    "
+  >
+    <FaEnvelope className="text-lime-400 shrink-0" />
+    <span>fluxfame01@gmail.com</span>
+  </a>
+
+  {/* WHATSAPP */}
+
+  <a
+    href="https://wa.me/8801605950629?text=Hi%20FluxFame,%20I'd%20like%20a%20free%20consultation%20for%20my%20business."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      flex
+      items-center
+      gap-3
+
+      text-gray-300
+      hover:text-lime-400
+
+      transition
+    "
+  >
+    <FaWhatsapp className="text-lime-400 shrink-0" />
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  {/* INSTAGRAM */}
+
+  <a
+    href="https://www.instagram.com/fluxfame01"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      flex
+      items-center
+      gap-3
+
+      text-gray-300
+      hover:text-lime-400
+
+      transition
+    "
+  >
+    <FaInstagram className="text-lime-400 shrink-0" />
+    <span>Follow on Instagram</span>
+  </a>
+
+  {/* LOCATION */}
+
+  <div className="flex items-center gap-3 text-gray-300">
+    <FaMapMarkerAlt className="text-lime-400 shrink-0" />
+    <span>USA • Serving Clients Worldwide</span>
+  </div>
+
+</div>
+
+{/* CONTACT BUTTON */}
+
+<a
+  href="/contact"
+  className="
+    mt-6
+
+    inline-flex
+    items-center
+    gap-2
+
+    bg-lime-400
+    text-black
+
+    font-semibold
+
+    px-5
+    py-3
+
+    rounded-xl
+
+    hover:scale-105
+    transition-all
+  "
+>
+  Contact Us
+  <FaArrowRight />
+</a>
+
+</div>
         </div>
 
         {/* Payments  */}
