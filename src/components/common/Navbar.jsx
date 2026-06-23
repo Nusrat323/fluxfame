@@ -136,7 +136,7 @@ export default function Navbar() {
   className="flex items-center gap-2 shrink-0"
 >
   <img
-    src="/fluxfame-favicon.ico"
+    src="/favicon.ico"
     alt="FluxFame Logo"
     className="w-7 h-7 object-contain"
   />

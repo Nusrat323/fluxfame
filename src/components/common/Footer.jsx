@@ -52,7 +52,7 @@ export default function Footer() {
             {/* BRAND */}
 <div className="flex flex-col items-center text-center">
   <img
-    src="/fluxfame-favicon.ico"
+    src="/favicon.ico"
     alt="FluxFame Logo"
     className="w-9 h-9 mb-1 object-contain"
   />
