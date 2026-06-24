@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 export default function About() {
   const [loading, setLoading] = useState(true);
@@ -55,6 +56,16 @@ export default function About() {
   }
 
   return (
+    <>
+    <Helmet>
+      <title>About Us | FluxFame</title>
+      <meta
+        name="description"
+        content="Learn about FluxFame, our mission, expertise, AI automation systems, CRM automation, and business growth solutions."
+      />
+      <link rel="canonical" href="https://fluxfame.site/about" />
+    </Helmet>
+
     <MainLayout>
       <div className="pt-32 pb-20 px-4 md:px-10 max-w-6xl mx-auto">
 
@@ -240,5 +251,6 @@ export default function About() {
 
       </div>
     </MainLayout>
+    </>
   );
 }

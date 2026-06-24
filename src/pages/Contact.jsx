@@ -8,6 +8,7 @@ import {
   FaWhatsapp,
   FaInstagram,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
   const [loading, setLoading] = useState(true);
@@ -68,6 +69,16 @@ export default function Contact() {
   }
 
   return (
+    <>
+    <Helmet>
+  <title>Contact Us | FluxFame</title>
+  <meta
+    name="description"
+    content="Contact FluxFame for AI automation, CRM automation, GoHighLevel systems and business workflow solutions."
+  />
+  <link rel="canonical" href="https://fluxfame.site/contact" />
+</Helmet>
+
     <MainLayout>
       <div className="pt-28 pb-20 px-4 md:px-10 max-w-6xl mx-auto">
 
@@ -203,5 +214,6 @@ export default function Contact() {
         </div>
       </div>
     </MainLayout>
+    </>
   );
 }

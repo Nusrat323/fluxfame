@@ -4,6 +4,7 @@ import CaseStudyCard from "../components/case-studies/CaseStudyCard";
 import { caseStudies } from "../data/caseStudies";
 import { TypeAnimation } from "react-type-animation";
 import CTASection from "../components/home/CTASection";
+import { Helmet } from "react-helmet-async";
 
 export default function CaseStudies() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,15 @@ export default function CaseStudies() {
   }
 
   return (
+    <>
+    <Helmet>
+      <title>Case Studies | FluxFame</title>
+      <meta
+        name="description"
+        content="Explore real AI automation, CRM automation, lead generation systems, funnels, and business growth case studies built by FluxFame."
+      />
+      <link rel="canonical" href="https://fluxfame.site/case-studies" />
+    </Helmet>
     <MainLayout>
       <section className="relative overflow-hidden pt-32 pb-24">
 
@@ -113,5 +123,6 @@ export default function CaseStudies() {
 
       <CTASection />
     </MainLayout>
+    </>
   );
 }

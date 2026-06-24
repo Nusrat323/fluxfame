@@ -1,7 +1,17 @@
 import MainLayout from "../layouts/MainLayout";
+import { Helmet } from "react-helmet-async";
 
 export default function Terms() {
   return (
+    <>
+    <Helmet>
+      <title>Terms & Conditions | FluxFame</title>
+      <meta
+        name="description"
+        content="Review the FluxFame Terms & Conditions for our AI automation, CRM automation, and business growth services."
+      />
+      <link rel="canonical" href="https://fluxfame.site/terms" />
+    </Helmet>
     <MainLayout>
       <section className="pt-32 pb-20 px-4 max-w-4xl mx-auto text-gray-300">
 
@@ -75,5 +85,6 @@ export default function Terms() {
 
       </section>
     </MainLayout>
+    </>
   );
 }
