@@ -145,6 +145,24 @@ export default function Contact() {
               </p>
             </a>
 
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/people/FluxFame/61590684362355/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass p-6 rounded-2xl border border-white/10 block
+               hover:border-lime-400/40 transition"
+            >
+              <div className="flex items-center gap-3">
+                <FaFacebook className="text-lime-400" />
+                <h3 className="font-semibold">Facebook</h3>
+              </div>
+              <p className="text-gray-400 mt-2">
+                Visit Facebook Page
+              </p>
+            </a>
+
+
             {/* LOCATION */}
             <div className="glass p-6 rounded-2xl border border-white/10">
               <div className="flex items-center gap-3">
