@@ -1,5 +1,6 @@
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function CaseStudyCard({ project }) {
   return (
@@ -124,6 +125,32 @@ export default function CaseStudyCard({ project }) {
             </div>
           </div>
         )}
+
+        {/* LIVE LINK */}
+        <div className="pt-2 border-t border-white/10">
+          {project.liveUrl ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                group/link
+                inline-flex items-center gap-2
+                text-xs sm:text-sm font-semibold
+                text-lime-400
+              "
+            >
+              <span className="border-b border-lime-400/40 group-hover/link:border-lime-400 transition-colors">
+                Visit Live Site
+              </span>
+              <FaArrowRight className="text-[10px] sm:text-xs transition-transform group-hover/link:translate-x-1" />
+            </a>
+          ) : (
+            <span className="text-xs sm:text-sm font-medium text-gray-500">
+              Live Link Coming Soon
+            </span>
+          )}
+        </div>
 
       </div>
     </div>

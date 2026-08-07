@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
   
   export default function CaseStudyPreview() {
     return (
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 overflow-hidden">
   
         {/* Background Glow */}
         <div className="absolute top-20 left-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
@@ -596,7 +596,7 @@ p-5
       strokeDasharray="4 4"
     />
 
-    {/* Y AXIS NUMBERS */}
+ 
     <text
       x="0"
       y="22"

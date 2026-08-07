@@ -89,8 +89,8 @@ export default function Contact() {
           </h1>
 
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-            Let’s build your automation system, funnel, or website that brings real clients.
-          </p>
+  Let's build modern websites and smart automation solutions that help your business grow.
+</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-10">

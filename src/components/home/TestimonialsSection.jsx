@@ -1,4 +1,3 @@
-
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -12,94 +11,83 @@ export default function TestimonialsSection() {
       name: "Sarah Williams",
       company: "Beauty Studio",
       review:
-        "The AI chatbot now handles most customer inquiries automatically. Appointment bookings increased and our team spends far less time replying to messages."
+        "Our new website looks premium, loads quickly and has made booking appointments much easier for our clients.",
     },
-  
     {
       name: "Ahmed Hassan",
       company: "Real Estate Agency",
       review:
-        "Lead follow-ups are now fully automated. Every inquiry receives an instant response and our agents only focus on qualified prospects."
+        "The website and lead management system work perfectly together. We receive more qualified inquiries and everything stays organized.",
     },
-  
     {
       name: "James Carter",
       company: "Dental Clinic",
       review:
-        "Appointment reminders dramatically reduced no-shows. The entire booking process feels more professional and organized."
+        "The online appointment system is simple to use, and automated reminders have significantly reduced missed appointments.",
     },
-  
     {
       name: "Zara Hussain",
       company: "Coaching Center",
       review:
-        "Student inquiries, registrations and follow-ups now happen automatically. We save hours every week on administrative work."
+        "Our new website is modern, responsive and makes student registrations much easier than before.",
     },
-  
     {
       name: "Michael Thompson",
       company: "E-commerce Store",
       review:
-        "Automated customer support and abandoned cart follow-ups helped us recover lost sales and improve customer satisfaction."
+        "The frontend design feels premium, checkout is smooth and customer engagement has noticeably improved.",
     },
-  
     {
       name: "David Wilson",
       company: "Gym & Fitness Center",
       review:
-        "The automated membership follow-up system consistently brings back inactive members and keeps engagement high."
+        "The website and automated inquiry system save our team hours every week while bringing in more membership requests.",
     },
-  
     {
       name: "Shahidul Islam",
       company: "Cleaning Agency",
       review:
-        "Our quote requests are automatically captured and followed up. We now convert more leads without increasing staff."
+        "Everything from quote requests to customer follow-ups is now much more organized, helping us convert more clients.",
     },
-  
     {
       name: "Emily Roberts",
       company: "Credit Repair Company",
       review:
-        "Lead nurturing, reminders and client communication are completely automated. The system keeps everything moving smoothly."
+        "The digital system simplified our workflow and improved communication with clients throughout the entire process.",
     },
-  
     {
       name: "Olivia Brown",
       company: "Med Spa",
       review:
-        "The AI receptionist answers questions instantly and books appointments around the clock. It feels like having an extra team member."
+        "The website looks fantastic and the AI assistant answers customer questions instantly, making the whole experience seamless.",
     },
-  
     {
       name: "Tanvir Rahman",
-      company: "Facebook Ads Agency",
+      company: "Marketing Agency",
       review:
-        "The CRM automation keeps every lead organized and ensures no opportunity slips through the cracks."
+        "Professional design, fast performance and smart automation have made managing new leads much easier.",
     },
-  
     {
       name: "Daniel Cooper",
       company: "Property Management",
       review:
-        "Tenant inquiries and maintenance requests are automatically routed and tracked. Operations became significantly more efficient."
+        "From website inquiries to internal workflows, everything is streamlined and much more efficient than before.",
     },
-  
     {
       name: "Jessica Miller",
-      company: "Online Course Business",
+      company: "Online Education",
       review:
-        "From lead capture to follow-up sequences, everything runs automatically. The system helped us scale without hiring more staff."
-    }
+        "The complete digital solution helped us attract more customers, automate repetitive tasks and deliver a better user experience.",
+    },
   ];
-  return (
-    <section className="relative  overflow-hidden">
 
-      {/* BACKGROUND GLOW */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
-      </div>
+return (
+  <section className="section relative overflow-hidden">
+    {/* BACKGROUND GLOW */}
+    <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute top-20 left-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
+      <div className="absolute bottom-20 right-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
+    </div>
 
       <div className="container-custom relative z-10">
 
@@ -119,10 +107,10 @@ export default function TestimonialsSection() {
           </h2>
 
           <p className="text-gray-400 mt-5 max-w-2xl mx-auto">
-            Helping businesses automate lead generation,
-            follow-ups and appointment booking with
-            AI-powered systems.
-          </p>
+  Helping businesses build modern websites, streamline
+  operations and create digital solutions that drive
+  real business growth.
+</p>
 
         </div>
 

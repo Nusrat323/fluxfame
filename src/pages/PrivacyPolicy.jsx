@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
       <title>Privacy Policy | FluxFame</title>
       <meta
         name="description"
-        content="Read the FluxFame Privacy Policy to learn how we collect, use, and protect your information."
+        content="Read the FluxFame Privacy Policy to learn how we collect, use, and protect your information across our website design and automation services."
       />
       <link rel="canonical" href="https://fluxfame.site/privacy" />
     </Helmet>
@@ -36,7 +36,9 @@ export default function PrivacyPolicy() {
         <p className="leading-relaxed mb-6">
           We may collect basic information such as your name, email address,
           and message details when you contact us through forms or email.
-          We do not collect sensitive personal data.
+          For website design projects, we may also collect business content,
+          images, branding assets, or hosting and domain details that you
+          provide to complete your project. We do not collect sensitive personal data.
         </p>
 
         <h2 className="text-xl font-semibold text-white mt-10 mb-3">
@@ -45,7 +47,8 @@ export default function PrivacyPolicy() {
 
         <p className="leading-relaxed mb-6">
           We use your information to respond to inquiries, provide services,
-          improve our systems, and communicate project-related updates.
+          build and deliver your website or automation systems, improve our
+          processes, and communicate project-related updates.
           We do not sell or share your personal data with third parties.
         </p>
 

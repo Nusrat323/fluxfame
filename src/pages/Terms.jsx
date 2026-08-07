@@ -8,7 +8,7 @@ export default function Terms() {
       <title>Terms & Conditions | FluxFame</title>
       <meta
         name="description"
-        content="Review the FluxFame Terms & Conditions for our AI automation, CRM automation, and business growth services."
+        content="Review the FluxFame Terms & Conditions for our website design, AI automation, CRM automation, and business growth services."
       />
       <link rel="canonical" href="https://fluxfame.site/terms" />
     </Helmet>
@@ -34,8 +34,9 @@ export default function Terms() {
         </h2>
 
         <p className="leading-relaxed mb-6">
-          We provide automation systems, CRM workflows, AI integrations,
-          funnel building, and business growth solutions using platforms like GoHighLevel.
+          We provide custom website design and development, automation systems,
+          CRM workflows, AI integrations, funnel building, and business growth
+          solutions using platforms like GoHighLevel.
         </p>
 
         <h2 className="text-xl font-semibold text-white mt-10 mb-3">
@@ -61,7 +62,7 @@ export default function Terms() {
         </h2>
 
         <p className="leading-relaxed mb-6">
-          All systems, workflows, and designs created by FluxFame remain
+          All websites, systems, workflows, and designs created by FluxFame remain
           our intellectual property until full payment is completed.
         </p>
 

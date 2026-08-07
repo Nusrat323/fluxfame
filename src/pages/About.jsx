@@ -61,7 +61,7 @@ export default function About() {
       <title>About Us | FluxFame</title>
       <meta
         name="description"
-        content="Learn about FluxFame, our mission, expertise, AI automation systems, CRM automation, and business growth solutions."
+        content="Learn about FluxFame, our mission, expertise, custom website design, AI automation systems, CRM automation, and business growth solutions."
       />
       <link rel="canonical" href="https://fluxfame.site/about" />
     </Helmet>
@@ -81,7 +81,8 @@ export default function About() {
           </h1>
 
           <p className="mt-5 text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            We build <span className="text-lime-400">high-converting funnels</span>,
+            We build <span className="text-lime-400">custom converting websites</span>,
+            <span className="text-lime-400"> high-converting funnels</span>,
             <span className="text-lime-400"> GoHighLevel automation systems</span>,
             and complete client acquisition machines that turn traffic into paying customers.
           </p>
@@ -92,10 +93,11 @@ export default function About() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-20"
+          className="grid grid-cols-2 md:grid-cols-5 gap-5 mb-20"
         >
           <Counter end={15} label="Projects Delivered" />
           <Counter end={10} label="Happy Clients" />
+          <Counter end={6} label="Websites Built" />
           <Counter end={5} label="Funnels Built" />
           <Counter end={3} label="Automation Systems" />
         </motion.section>
@@ -115,8 +117,8 @@ export default function About() {
             </h2>
 
             <p className="text-gray-300 leading-relaxed">
-              FluxFame is a registered U.S. LLC providing professional funnel building,
-              CRM automation, and lead generation systems for global clients.
+              FluxFame is a registered U.S. LLC providing professional website design,
+              funnel building, CRM automation, and lead generation systems for global clients.
             </p>
 
             <p className="text-gray-400 mt-4 leading-relaxed">
@@ -168,13 +170,13 @@ export default function About() {
             </h2>
 
             <p className="text-gray-300 leading-relaxed">
-              Our mission is to help service-based businesses scale using automated lead systems,
-              high-converting funnels, and smart CRM workflows.
+              Our mission is to help service-based businesses scale using custom-built websites,
+              automated lead systems, high-converting funnels, and smart CRM workflows.
             </p>
 
             <p className="text-gray-400 mt-4 leading-relaxed">
-              We don’t just build landing pages — we build complete systems that generate leads,
-              automate follow-ups, and increase bookings.
+              We don't just build landing pages — we design complete websites and systems that
+              attract visitors, generate leads, automate follow-ups, and increase bookings.
             </p>
           </div>
         </section>
@@ -187,6 +189,10 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
+              {
+                title: "Custom Website Design",
+                desc: "We design and build fast, responsive websites tailored to your brand and built to convert."
+              },
               {
                 title: "High-Converting Funnels",
                 desc: "We design systems that turn visitors into real booked clients."
@@ -232,17 +238,19 @@ export default function About() {
             </h2>
 
             <p className="text-gray-300 leading-relaxed">
-              This agency started after realizing most businesses don’t fail because of lack of leads —
-              they fail because those leads are never properly followed up.
+              This agency started after realizing most businesses don't fail because of lack of leads —
+              they fail because those leads are never properly followed up, or their website was never
+              built to capture them in the first place.
             </p>
 
             <p className="text-gray-400 mt-4 leading-relaxed">
-              We saw missed opportunities everywhere — slow response, no automation, and no tracking systems.
+              We saw missed opportunities everywhere — outdated websites, slow response, no automation,
+              and no tracking systems.
             </p>
 
             <p className="text-gray-400 mt-4 leading-relaxed">
-              Today, we build smart funnels + CRM automation systems that turn missed leads
-              into paying clients automatically.
+              Today, we design custom websites and build smart funnels + CRM automation systems that
+              turn visitors and missed leads into paying clients automatically.
             </p>
 
             <div className="mt-8 h-1 w-24 bg-lime-400 rounded-full"></div>

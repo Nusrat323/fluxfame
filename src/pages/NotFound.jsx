@@ -26,7 +26,7 @@ export default function NotFound() {
 
         {/* DESCRIPTION */}
         <p className="text-gray-400 mt-4 text-sm sm:text-base leading-relaxed">
-          The page you're looking for doesn’t exist or has been moved.
+          The page you're looking for doesn't exist or has been moved.
           Please check the URL or go back to the homepage.
         </p>
 
@@ -79,7 +79,7 @@ export default function NotFound() {
 
         
         <p className="text-xs text-gray-600 mt-10">
-          FluxFame • AI Automation Systems
+          FluxFame • Websites & AI Automation Systems
         </p>
 
       </div>

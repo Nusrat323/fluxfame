@@ -6,62 +6,62 @@ export default function FAQ() {
     {
       question: "What services do you provide?",
       answer:
-        "We specialize in AI automation, GoHighLevel setup, CRM systems, AI chatbots, lead nurturing, appointment booking automation, custom funnels and workflow automation designed to help businesses grow faster."
+        "We provide modern frontend website development, AI automation, GoHighLevel CRM setup, workflow automation, landing pages, AI chatbots, booking systems and custom digital solutions for businesses.",
     },
-
+  
+    {
+      question: "Can you build custom business websites?",
+      answer:
+        "Yes. We build fast, responsive and modern frontend websites tailored to your business, whether it's a company website, landing page, portfolio or e-commerce frontend.",
+    },
+  
     {
       question: "What types of businesses do you work with?",
       answer:
-        "We work with clinics, dental practices, gyms, coaching centers, real estate agencies, cleaning companies, beauty salons, e-commerce brands, credit repair companies and other service-based businesses."
+        "We work with startups, agencies, clinics, dental practices, gyms, coaching centers, real estate companies, beauty salons, e-commerce brands and many other service-based businesses.",
     },
-
+  
+    {
+      question: "Can you combine a website with AI automation?",
+      answer:
+        "Absolutely. We can build your website and integrate it with AI chatbots, CRM systems, appointment booking, lead capture and automated follow-up workflows.",
+    },
+  
     {
       question: "Do I need GoHighLevel before working with you?",
       answer:
-        "No. If you don't have GoHighLevel yet, we can help you choose the right plan, set up your account and build the entire system for you."
+        "No. If you're planning to use GoHighLevel, we'll help you choose the right plan, configure your account and build the complete system for your business.",
     },
-
-    {
-      question: "Can you build custom automations for my business?",
-      answer:
-        "Yes. Every business operates differently, so we build custom workflows, automations and CRM systems based on your specific requirements."
-    },
-
+  
     {
       question: "How long does a project usually take?",
       answer:
-        "Most automation projects take between 3 and 14 days depending on complexity, integrations and the number of workflows required."
+        "Project timelines depend on complexity. Most frontend websites take 3–10 days, while larger automation systems and custom solutions may take 1–3 weeks.",
     },
-
+  
     {
-      question: "Do you offer AI chatbots?",
+      question: "Will my website work on mobile devices?",
       answer:
-        "Yes. We create AI chatbots that can answer questions, qualify leads, book appointments and provide customer support automatically."
+        "Yes. Every website we build is fully responsive and optimized to deliver a smooth experience across desktop, tablet and mobile devices.",
     },
-
+  
     {
-      question: "Will automation replace my staff?",
+      question: "Do you offer ongoing support?",
       answer:
-        "Automation is designed to remove repetitive tasks so your team can focus on higher-value activities such as sales, customer relationships and business growth."
+        "Yes. We provide maintenance, updates, performance improvements and ongoing technical support after project delivery.",
     },
-
-    {
-      question: "Do you provide ongoing support?",
-      answer:
-        "Yes. We provide ongoing support, maintenance and optimization to ensure your systems continue running smoothly."
-    },
-
+  
     {
       question: "Can you integrate with my existing tools?",
       answer:
-        "In most cases, yes. We can integrate CRM platforms, calendars, payment processors, forms, websites and many third-party applications."
+        "Yes. We can integrate websites with CRM platforms, booking systems, forms, payment gateways, calendars and many third-party services depending on your requirements.",
     },
-
+  
     {
       question: "How do we get started?",
       answer:
-        "Simply contact us and we'll discuss your business goals, current processes and automation opportunities before recommending the best solution."
-    }
+        "Simply contact us with your project idea. We'll discuss your goals, recommend the best solution and provide a clear plan before development begins.",
+    },
   ];
 
   const [active, setActive] = useState(0);
@@ -92,9 +92,8 @@ export default function FAQ() {
           </h2>
 
           <p className="text-gray-400 mt-5 max-w-2xl mx-auto">
-            Everything you need to know before starting your
-            automation project.
-          </p>
+  Everything you need to know before starting your next digital project.
+</p>
         </div>
 
         {/* FAQ LIST */}
