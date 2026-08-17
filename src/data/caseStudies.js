@@ -129,6 +129,48 @@ export const caseStudies = [
     "Provides a scalable foundation that can be integrated with any custom backend, CMS, or e-commerce API.",
   ],
 },
+{
+  id: "carenest-care-platform",
+
+  title: "CareNest — Nanny & Senior Care Platform",
+  subtitle: "Custom Caregiver Booking & Management Platform",
+  category: "website",
+
+  description:
+    "A modern care platform designed to help families discover trusted caregivers, explore detailed profiles, and request personalized meet-and-greet appointments through a simple and professional online experience.",
+
+  image: "https://i.ibb.co.com/b51grWw4/Untitled-design.png",
+
+  liveUrl: "https://carenest01.netlify.app/",
+
+  highlights: [
+    "Fully Responsive Website",
+    "Professional Caregiver Profiles",
+    "Nanny & Senior Care Categories",
+    "Caregiver Search & Discovery",
+    "Detailed Profile & Verification Information",
+    "Meet-and-Greet Booking System",
+    "Secure User Accounts",
+    "Google Sign-In",
+    "Appointment Request Management",
+    "Admin Dashboard",
+    "Caregiver Management",
+    "Booking & User Management",
+  ],
+
+  results: [
+    "Makes it easier for families to discover and evaluate suitable caregivers online.",
+    "Creates a professional digital experience that builds trust before families make contact.",
+    "Streamlines caregiver discovery and appointment requests through one centralized platform.",
+  ],
+
+  benefits: [
+    "Helps care businesses build trust and credibility with a professional online presence.",
+    "Makes it easier for potential clients to find caregivers, explore their experience, and request appointments.",
+    "Reduces manual communication and simplifies booking management through a centralized system.",
+    "Provides a scalable digital platform that can grow with the business and support future services.",
+  ],
+},
 
 {
   id: "nestkey-real-estate",
