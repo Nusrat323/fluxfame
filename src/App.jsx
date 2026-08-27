@@ -11,18 +11,24 @@ import Terms from "./pages/Terms";
 export default function App() {
   return (
     <Routes>
-      {/* HOME */}
+      
       <Route path="/" element={<Home />} />
 
-      {/* PAGES */}
+     
       <Route path="/case-studies" element={<CaseStudies />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/privacy" element={<PrivacyPolicy/>} />
       <Route path="/terms" element={<Terms/>} />
 
-      {/* 404 */}
+      
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
+
+
+
+
+
+

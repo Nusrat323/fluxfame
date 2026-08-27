@@ -81,7 +81,7 @@ export default function Footer() {
               </button>
 
               <a href="/case-studies" className="block hover:text-lime-400 transition">
-                Case Study
+                Our Work
               </a>
 
               <button onClick={() => goToSection("process")} className="block hover:text-lime-400 transition text-left">

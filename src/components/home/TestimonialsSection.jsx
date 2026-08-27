@@ -5,6 +5,8 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+import AnimatedSection from "../common/AnimatedSection";
+
 export default function TestimonialsSection() {
   const testimonials = [
     {
@@ -81,192 +83,353 @@ export default function TestimonialsSection() {
     },
   ];
 
-return (
-  <section className="section relative overflow-hidden">
-    {/* BACKGROUND GLOW */}
-    <div className="absolute inset-0 pointer-events-none">
-      <div className="absolute top-20 left-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
-      <div className="absolute bottom-20 right-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
-    </div>
+  return (
+    <section className="section relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className="
+            absolute
+            top-20
+            left-20
+            w-72
+            h-72
+            bg-lime-400/10
+            blur-[150px]
+            rounded-full
+          "
+        />
+
+        <div
+          className="
+            absolute
+            bottom-20
+            right-20
+            w-72
+            h-72
+            bg-lime-400/10
+            blur-[150px]
+            rounded-full
+          "
+        />
+      </div>
 
       <div className="container-custom relative z-10">
 
-        {/* BADGE */}
-        <div className="flex justify-center">
-          <div className="glass px-4 py-2 rounded-full text-lime-400 text-sm mb-6">
-            ✦ CLIENT SUCCESS STORIES
-          </div>
-        </div>
-
-        {/* HEADING */}
-        <div className="text-center mb-14">
-
-          <h2 className="text-4xl md:text-6xl font-black">
-            Trusted By
-            <span className="gradient-text"> Growing Businesses</span>
-          </h2>
-
-          <p className="text-gray-400 mt-5 max-w-2xl mx-auto">
-  Helping businesses build modern websites, streamline
-  operations and create digital solutions that drive
-  real business growth.
-</p>
-
-        </div>
-
-        {/* TESTIMONIAL SLIDER */}
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          loop={true}
-          spaceBetween={20}
-          breakpoints={{
-            0: {
-              slidesPerView: 1.05,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1280: {
-              slidesPerView: 2.5,
-            },
-          }}
+        <AnimatedSection
+          direction="up"
+          y={25}
+          duration={0.7}
+          amount={0.3}
         >
-          {testimonials.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className="
-                  relative
-                  overflow-hidden
+          <div className="flex justify-center">
+            <div
+              className="
+                glass
+                px-4
+                py-2
+                rounded-full
+                text-lime-400
+                text-sm
+                mb-6
+              "
+            >
+              ✦ CLIENT SUCCESS STORIES
+            </div>
+          </div>
+        </AnimatedSection>
 
-                  rounded-[28px]
+        <AnimatedSection
+          direction="up"
+          y={35}
+          delay={0.08}
+          duration={0.8}
+          amount={0.3}
+        >
+          <div className="text-center mb-14">
 
-                  bg-white/[0.04]
-                  backdrop-blur-[25px]
+            <h2
+              className="
+                text-4xl
+                md:text-6xl
+                font-black
+              "
+            >
+              Trusted By
+              <span className="gradient-text">
+                {" "}Growing Businesses
+              </span>
+            </h2>
 
-                  border border-white/10
+            <p
+              className="
+                text-gray-400
+                mt-5
+                max-w-2xl
+                mx-auto
+              "
+            >
+              Helping businesses build modern websites, streamline
+              operations and create digital solutions that drive
+              real business growth.
+            </p>
 
-                  p-5
+          </div>
+        </AnimatedSection>
 
-                  transition-all
-                  duration-300
+        <AnimatedSection
+          direction="up"
+          y={45}
+          delay={0.16}
+          duration={0.9}
+          amount={0.15}
+        >
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            loop={true}
+            spaceBetween={20}
+            breakpoints={{
+              0: {
+                slidesPerView: 1.05,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1280: {
+                slidesPerView: 2.5,
+              },
+            }}
+          >
+            {testimonials.map((item, index) => (
+              <SwiperSlide key={index}>
 
-                  hover:-translate-y-1
-                  hover:border-lime-400/20
-                "
-              >
-
-                {/* TOP CENTER GLOW BORDER */}
                 <div
                   className="
-                    absolute
-                    top-0
-                    left-1/2
-                    -translate-x-1/2
+                    group
+                    relative
+                    overflow-hidden
+                    h-full
 
-                    w-32
-                    h-[1.5px]
+                    rounded-[28px]
 
-                    bg-gradient-to-r
-                    from-transparent
-                    via-lime-400/70
-                    to-transparent
-                  "
-                />
+                    bg-white/[0.04]
+                    backdrop-blur-[25px]
 
-                {/* SOFT GLOW */}
-                <div
-                  className="
-                    absolute
-                    -top-10
-                    right-0
+                    border
+                    border-white/10
 
-                    w-24
-                    h-24
+                    p-5
 
-                    bg-lime-400/10
-                    blur-3xl
+                    transition-all
+                    duration-500
 
-                    pointer-events-none
-                  "
-                />
-
-                {/* QUOTE ICON */}
-                <div
-                  className="
-                    w-10
-                    h-10
-
-                    rounded-xl
-
-                    bg-lime-400/10
-                    border border-lime-400/20
-
-                    flex
-                    items-center
-                    justify-center
-
-                    text-lime-400
-
-                    mb-4
+                    hover:-translate-y-1
+                    hover:border-lime-400/25
+                    hover:bg-white/[0.055]
+                    hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)]
                   "
                 >
-                  <FaQuoteLeft size={14} />
-                </div>
 
-                {/* STARS */}
-                <div className="flex gap-1 text-yellow-300 text-sm mb-4">
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                  <FaStar />
-                </div>
+                  <div
+                    className="
+                      absolute
+                      top-0
+                      left-1/2
+                      -translate-x-1/2
 
-                {/* REVIEW */}
-                <p className="text-gray-300 leading-relaxed text-sm">
-                  "{item.review}"
-                </p>
+                      w-32
+                      h-[1.5px]
 
-                {/* DIVIDER */}
-                <div
-                  className="
-                    mt-6
-                    h-px
+                      bg-gradient-to-r
+                      from-transparent
+                      via-lime-400/70
+                      to-transparent
 
-                    bg-gradient-to-r
-                    from-lime-400/30
-                    to-transparent
-                  "
-                />
+                      transition-all
+                      duration-500
 
-                {/* CLIENT */}
-                <div className="mt-4">
+                      group-hover:w-48
+                      group-hover:via-lime-400
+                    "
+                  />
 
-                  <h4 className="font-semibold text-white">
-                    {item.name}
-                  </h4>
 
-                  <p className="text-gray-400 text-sm mt-1">
-                    {item.company}
+                  <div
+                    className="
+                      absolute
+                      -top-10
+                      right-0
+
+                      w-24
+                      h-24
+
+                      bg-lime-400/10
+                      blur-3xl
+
+                      pointer-events-none
+
+                      transition-all
+                      duration-500
+
+                      group-hover:bg-lime-400/20
+                    "
+                  />
+
+                 
+
+                  <div
+                    className="
+                      relative
+                      z-10
+
+                      w-10
+                      h-10
+
+                      rounded-xl
+
+                      bg-lime-400/10
+                      border
+                      border-lime-400/20
+
+                      flex
+                      items-center
+                      justify-center
+
+                      text-lime-400
+
+                      mb-4
+
+                      transition-all
+                      duration-500
+
+                      group-hover:bg-lime-400/15
+                      group-hover:border-lime-400/40
+                      group-hover:scale-105
+                    "
+                  >
+                    <FaQuoteLeft size={14} />
+                  </div>
+
+                 
+                  <div
+                    className="
+                      relative
+                      z-10
+                      flex
+                      gap-1
+                      text-yellow-300
+                      text-sm
+                      mb-4
+                    "
+                  >
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                  </div>
+
+                  
+
+                  <p
+                    className="
+                      relative
+                      z-10
+                      text-gray-300
+                      leading-relaxed
+                      text-sm
+                    "
+                  >
+                    "{item.review}"
                   </p>
 
+                 
+
+                  <div
+                    className="
+                      relative
+                      z-10
+                      mt-6
+                      h-px
+
+                      bg-gradient-to-r
+                      from-lime-400/30
+                      via-lime-400/10
+                      to-transparent
+                    "
+                  />
+
+                  
+
+                  <div className="relative z-10 mt-4">
+
+                    <h4
+                      className="
+                        font-semibold
+                        text-white
+                        transition-colors
+                        duration-300
+                        group-hover:text-lime-300
+                      "
+                    >
+                      {item.name}
+                    </h4>
+
+                    <p
+                      className="
+                        text-gray-400
+                        text-sm
+                        mt-1
+                      "
+                    >
+                      {item.company}
+                    </p>
+
+                  </div>
+
+                 
+
+                  <div
+                    className="
+                      absolute
+                      bottom-0
+                      left-8
+                      right-8
+                      h-[2px]
+
+                      rounded-full
+
+                      bg-gradient-to-r
+                      from-transparent
+                      via-lime-400/50
+                      to-transparent
+
+                      opacity-0
+                      scale-x-50
+
+                      transition-all
+                      duration-500
+
+                      group-hover:opacity-100
+                      group-hover:scale-x-100
+                    "
+                  />
+
                 </div>
 
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </AnimatedSection>
 
       </div>
     </section>
   );
 }
-

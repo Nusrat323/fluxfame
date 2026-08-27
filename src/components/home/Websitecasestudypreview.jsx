@@ -1,113 +1,113 @@
-import { FaCheckCircle, FaArrowRight, FaCss3Alt } from "react-icons/fa";
-import { SiReact, SiTailwindcss } from "react-icons/si";
+import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const features = [
   "Custom UI/UX Design",
-  "Fully Responsive Layout",
+  "Fully Responsive Experience",
+  "Product & Shopping Experience",
   "Cart & Checkout Flow",
-  "Auth & User Pages",
-  "Admin Panel Management",
+  "Customer Account Pages",
+  "Admin Management System",
   "Performance Optimized",
   "SEO Friendly Structure",
 ];
 
-const techStack = [
-  { icon: <SiReact />, name: "React" },
-  { icon: <SiTailwindcss />, name: "Tailwind" },
-  { icon: <FaCss3Alt />, name: "CSS" },
-];
-
 export default function WebsiteCaseStudyPreview() {
   return (
-    <section className="relative py-10 overflow-hidden">
+    <section className="relative overflow-hidden py-10">
       {/* BACKGROUND GLOW */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
-      <div className="absolute bottom-20 right-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
+      <div className="absolute left-20 top-20 h-72 w-72 rounded-full bg-lime-400/10 blur-[150px]" />
+      <div className="absolute bottom-20 right-20 h-72 w-72 rounded-full bg-lime-400/10 blur-[150px]" />
 
-      <div className="container-custom px-3 sm:px-6 lg:px-0 relative z-10">
+      <div className="container-custom relative z-10 px-3 sm:px-6 lg:px-0">
         {/* CASE STUDY CARD */}
         <div
           className="
-            relative overflow-hidden rounded-[30px]
-            bg-white/[0.06] backdrop-blur-[40px]
+            relative grid overflow-hidden rounded-[30px]
             border border-white/10
+            bg-white/[0.06]
             shadow-[0_0_60px_rgba(217,255,47,.05)]
-            grid lg:grid-cols-2
+            backdrop-blur-[40px]
+            lg:grid-cols-2
           "
         >
-         
-          <div className="hidden lg:block absolute left-1/2 top-0 w-px h-full bg-white/10" />
+          {/* CENTER DIVIDER */}
+          <div className="absolute left-1/2 top-0 hidden h-full w-px bg-white/10 lg:block" />
+
           <div
             className="
-              hidden lg:block absolute left-1/2 top-1/2
+              absolute left-1/2 top-1/2 hidden
+              h-40 w-[1.5px]
               -translate-x-1/2 -translate-y-1/2
-              w-[1.5px] h-40
               bg-gradient-to-b from-transparent via-lime-400/30 to-transparent
               blur-[1px]
+              lg:block
             "
           />
 
           {/* EDGE GLOW LINES */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/70 to-transparent blur-[1px]" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-[1.5px] bg-gradient-to-r from-transparent via-lime-400/70 to-transparent blur-[1px]" />
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[1.5px] h-40 bg-gradient-to-b from-transparent via-lime-400/70 to-transparent blur-[1px]" />
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[1.5px] h-40 bg-gradient-to-b from-transparent via-lime-400/70 to-transparent blur-[1px]" />
+          <div className="absolute left-1/2 top-0 h-[1.5px] w-40 -translate-x-1/2 bg-gradient-to-r from-transparent via-lime-400/70 to-transparent blur-[1px]" />
+          <div className="absolute bottom-0 left-1/2 h-[1.5px] w-40 -translate-x-1/2 bg-gradient-to-r from-transparent via-lime-400/70 to-transparent blur-[1px]" />
+          <div className="absolute left-0 top-1/2 h-40 w-[1.5px] -translate-y-1/2 bg-gradient-to-b from-transparent via-lime-400/70 to-transparent blur-[1px]" />
+          <div className="absolute right-0 top-1/2 h-40 w-[1.5px] -translate-y-1/2 bg-gradient-to-b from-transparent via-lime-400/70 to-transparent blur-[1px]" />
 
           {/* CORNER SOFT GLOWS */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-20 bg-lime-400/8 blur-[60px] pointer-events-none" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-56 h-20 bg-lime-400/8 blur-[60px] pointer-events-none" />
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-20 h-56 bg-lime-400/6 blur-[60px] pointer-events-none" />
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-20 h-56 bg-lime-400/6 blur-[60px] pointer-events-none" />
+          <div className="pointer-events-none absolute left-1/2 top-0 h-20 w-56 -translate-x-1/2 bg-lime-400/8 blur-[60px]" />
+          <div className="pointer-events-none absolute bottom-0 left-1/2 h-20 w-56 -translate-x-1/2 bg-lime-400/8 blur-[60px]" />
+          <div className="pointer-events-none absolute left-0 top-1/2 h-56 w-20 -translate-y-1/2 bg-lime-400/6 blur-[60px]" />
+          <div className="pointer-events-none absolute right-0 top-1/2 h-56 w-20 -translate-y-1/2 bg-lime-400/6 blur-[60px]" />
 
           {/* LEFT SIDE */}
-          <div className="p-6 lg:p-8 relative z-10">
-            <div className="glass inline-flex items-center px-3 py-1.5 rounded-full text-lime-400 text-xs whitespace-nowrap mb-4">
+          <div className="relative z-10 p-6 lg:p-8">
+            <div className="glass mb-4 inline-flex items-center whitespace-nowrap rounded-full px-3 py-1.5 text-xs text-lime-400">
               ✦ CASE STUDY
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-black leading-tight">
+            <h2 className="text-2xl font-black leading-tight sm:text-3xl">
               Grocery E-commerce
               <br />
-              <span className="gradient-text">Frontend Build</span>
+              <span className="gradient-text">
+                Website Experience
+              </span>
             </h2>
 
-            <p className="text-gray-400 mt-2 text-sm leading-relaxed max-w-xl">
-              We designed and built a complete grocery e-commerce
-              frontend from scratch, complete with a dedicated
-              admin panel, focused on clean UI, smooth navigation
-              and a seamless cart-to-checkout experience.
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-gray-400">
+              We designed and built a complete grocery shopping experience
+              focused on intuitive product discovery, smooth navigation,
+              secure customer journeys, and a seamless path from browsing
+              to checkout.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-2 mt-4">
+            {/* FEATURES */}
+            <div className="mt-4 grid gap-2 sm:grid-cols-2">
               {features.map((feature) => (
-                <div key={feature} className="flex items-center gap-2">
-                  <FaCheckCircle className="text-lime-400 shrink-0 text-sm" />
-                  <span className="text-sm">{feature}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap gap-2 mt-4">
-              {techStack.map((tech) => (
                 <div
-                  key={tech.name}
-                  className="glass flex items-center gap-2 px-2.5 py-1 rounded-lg text-xs text-gray-300"
+                  key={feature}
+                  className="flex items-center gap-2"
                 >
-                  <span className="text-lime-400">{tech.icon}</span>
-                  {tech.name}
+                  <FaCheckCircle className="shrink-0 text-sm text-lime-400" />
+
+                  <span className="text-sm text-white/85">
+                    {feature}
+                  </span>
                 </div>
               ))}
             </div>
 
+            {/* CTA */}
             <Link
               to="/case-studies"
               className="
-                mt-5 w-full sm:w-fit
-                bg-lime-400 text-black font-semibold
-                px-6 py-2.5 rounded-2xl
-                flex items-center justify-center gap-3
-                hover:scale-105 transition-all
+                mt-5 flex w-full items-center justify-center gap-3
+                rounded-2xl
+                bg-lime-400
+                px-6 py-2.5
+                font-semibold
+                text-black
+                transition-all
+                hover:scale-[1.03]
+                hover:shadow-[0_0_30px_rgba(163,230,53,0.2)]
+                sm:w-fit
               "
             >
               View Full Case Study
@@ -116,69 +116,100 @@ export default function WebsiteCaseStudyPreview() {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="p-6 lg:p-8 flex items-center relative z-10">
+          <div className="relative z-10 flex items-center p-6 lg:p-8">
             <div className="relative w-full">
-              <div className="absolute -inset-4 bg-lime-400/10 blur-[60px] rounded-[30px] pointer-events-none" />
+              {/* OUTER GLOW */}
+              <div className="pointer-events-none absolute -inset-4 rounded-[30px] bg-lime-400/10 blur-[60px]" />
 
-              <div className="relative rounded-2xl p-[1.5px] bg-gradient-to-br from-lime-400/40 via-white/10 to-transparent">
+              <div className="relative rounded-2xl bg-gradient-to-br from-lime-400/40 via-white/10 to-transparent p-[1.5px]">
                 <div
                   className="
                     relative w-full overflow-hidden rounded-2xl
-                    bg-[#0d1117]/80 backdrop-blur-[24px]
+                    bg-[#0d1117]/80
                     shadow-[0_25px_70px_rgba(0,0,0,0.45)]
+                    backdrop-blur-[24px]
                   "
                 >
-                  {/* Browser Top Bar */}
-                  <div className="flex items-center gap-2 px-4 py-3 bg-white/[0.05] border-b border-white/[0.06]">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-400/70" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-lime-400/70" />
+                  {/* BROWSER TOP BAR */}
+                  <div className="flex items-center gap-2 border-b border-white/[0.06] bg-white/[0.05] px-4 py-3">
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-lime-400/70" />
 
-                    <div className="ml-3 flex-1 bg-white/[0.06] rounded-full px-3 py-1 text-[11px] text-gray-400 truncate flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-lime-400 shadow-[0_0_8px_rgba(217,255,47,.8)]" />
-                      freshcart.app
+                    <div className="ml-3 flex min-w-0 flex-1 items-center gap-1.5 rounded-full bg-white/[0.06] px-3 py-1 text-[11px] text-gray-400">
+                      <span className="h-2 w-2 shrink-0 rounded-full bg-lime-400 shadow-[0_0_8px_rgba(217,255,47,.8)]" />
+
+                      <span className="truncate">
+                        freshcart.app
+                      </span>
                     </div>
                   </div>
 
-                  {/* Mock Website */}
-                  <div className="p-3 relative">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-16 bg-lime-400/10 blur-[50px] pointer-events-none" />
+                  {/* MOCK WEBSITE */}
+                  <div className="relative p-3">
+                    <div className="pointer-events-none absolute left-1/2 top-0 h-16 w-3/4 -translate-x-1/2 bg-lime-400/10 blur-[50px]" />
 
-                    <div className="flex items-center justify-between mb-2 relative">
-                      <div className="w-14 h-2.5 rounded-full bg-lime-400/60" />
+                    {/* NAVIGATION */}
+                    <div className="relative mb-2 flex items-center justify-between">
+                      <div className="h-2.5 w-14 rounded-full bg-lime-400/60" />
+
                       <div className="flex gap-2">
-                        <div className="w-7 h-2 rounded-full bg-white/20" />
-                        <div className="w-7 h-2 rounded-full bg-white/20" />
-                        <div className="w-7 h-2 rounded-full bg-white/20" />
+                        <div className="h-2 w-7 rounded-full bg-white/20" />
+                        <div className="h-2 w-7 rounded-full bg-white/20" />
+                        <div className="h-2 w-7 rounded-full bg-white/20" />
                       </div>
-                      <div className="w-5 h-5 rounded-full bg-white/10" />
+
+                      <div className="h-5 w-5 rounded-full bg-white/10" />
                     </div>
 
-                    <div className="rounded-xl bg-gradient-to-br from-lime-400/15 to-transparent border border-white/[0.06] p-2.5 mb-2 relative overflow-hidden">
-                      <div className="absolute -top-6 -right-6 w-24 h-24 bg-lime-400/15 blur-[40px] rounded-full" />
-                      <div className="w-2/3 h-2.5 rounded-full bg-white/40 mb-1.5" />
-                      <div className="w-1/2 h-2 rounded-full bg-white/20 mb-2" />
-                      <div className="w-16 h-5 rounded-lg bg-lime-400/80 shadow-[0_0_16px_rgba(217,255,47,.35)]" />
+                    {/* HERO */}
+                    <div className="relative mb-2 overflow-hidden rounded-xl border border-white/[0.06] bg-gradient-to-br from-lime-400/15 to-transparent p-2.5">
+                      <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-lime-400/15 blur-[40px]" />
+
+                      <div className="mb-1.5 h-2.5 w-2/3 rounded-full bg-white/40" />
+
+                      <div className="mb-2 h-2 w-1/2 rounded-full bg-white/20" />
+
+                      <div className="h-5 w-16 rounded-lg bg-lime-400/80 shadow-[0_0_16px_rgba(217,255,47,.35)]" />
                     </div>
 
+                    {/* PRODUCTS */}
                     <div className="grid grid-cols-3 gap-2">
                       {[1, 2, 3].map((item) => (
                         <div
                           key={item}
-                          className="rounded-lg bg-white/[0.05] border border-white/[0.06] p-1.5 transition-transform hover:-translate-y-1"
+                          className="
+                            rounded-lg
+                            border border-white/[0.06]
+                            bg-white/[0.05]
+                            p-1.5
+                            transition-transform
+                            hover:-translate-y-1
+                          "
                         >
-                          <div className="w-full h-8 rounded-md bg-white/[0.08] mb-1.5" />
-                          <div className="w-3/4 h-1.5 rounded-full bg-white/20 mb-1" />
-                          <div className="w-1/2 h-1.5 rounded-full bg-lime-400/60" />
+                          <div className="mb-1.5 h-8 w-full rounded-md bg-white/[0.08]" />
+
+                          <div className="mb-1 h-1.5 w-3/4 rounded-full bg-white/20" />
+
+                          <div className="h-1.5 w-1/2 rounded-full bg-lime-400/60" />
                         </div>
                       ))}
+                    </div>
+
+                    {/* BOTTOM SHOPPING ROW */}
+                    <div className="mt-2 flex items-center justify-between rounded-lg border border-white/[0.06] bg-white/[0.035] px-2.5 py-2">
+                      <div>
+                        <div className="mb-1 h-1.5 w-16 rounded-full bg-white/20" />
+                        <div className="h-1.5 w-10 rounded-full bg-lime-400/50" />
+                      </div>
+
+                      <div className="h-6 w-16 rounded-lg bg-lime-400/70" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </section>

@@ -157,7 +157,7 @@ export default function Navbar() {
             </NavItem>
 
             <NavItem id="case-studies" to="/case-studies">
-              Case Studies
+              Our Work 
             </NavItem>
 
             <NavItem id="process" onClick={() => goToSection("process")}>
@@ -202,7 +202,7 @@ export default function Navbar() {
                 </button>
 
                 <Link to="/case-studies" onClick={closeMenu} className="px-6 py-4 border-b border-white/5 hover:text-lime-400">
-                  Case Studies
+                  Our Work
                 </Link>
 
                 <button onClick={() => goToSection("process")} className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400">
