@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -33,12 +34,10 @@ export default function Navbar() {
     requestAnimationFrame(scrollToTarget);
   };
 
- 
   useEffect(() => {
     const handleScroll = () => {
       if (menuOpen) setMenuOpen(false);
 
-      
       if (window.scrollY > 20) {
         setScrolled(true);
       } else {
@@ -53,6 +52,7 @@ export default function Navbar() {
 
       sections.forEach((id) => {
         const el = document.getElementById(id);
+
         if (el) {
           const rect = el.getBoundingClientRect();
 
@@ -66,11 +66,13 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [menuOpen, location.pathname]);
 
   useEffect(() => {
     if (location.pathname === "/") setActive("home");
+    else if (location.pathname === "/services") setActive("services");
     else if (location.pathname === "/about") setActive("about");
     else if (location.pathname === "/contact") setActive("contact");
     else if (location.pathname === "/case-studies") setActive("case-studies");
@@ -89,6 +91,7 @@ export default function Navbar() {
       return (
         <Link to={to} onClick={closeMenu} className={base}>
           {children}
+
           <span
             className={`${underline} ${
               isActive ? "w-full opacity-100" : "w-0 opacity-0"
@@ -101,6 +104,7 @@ export default function Navbar() {
     return (
       <button onClick={onClick} className={base}>
         {children}
+
         <span
           className={`${underline} ${
             isActive ? "w-full opacity-100" : "w-0 opacity-0"
@@ -112,7 +116,6 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-5 transition-all duration-300">
-
       <div className="container-custom">
 
         {/* NAVBAR */}
@@ -131,44 +134,64 @@ export default function Navbar() {
         >
 
           {/* LOGO */}
-<button
-  onClick={() => goToSection("home")}
-  className="flex items-center gap-2 shrink-0"
->
-  <img
-    src="/favicon.ico"
-    alt="FluxFame Logo"
-    className="w-7 h-7 object-contain"
-  />
+          <button
+            onClick={() => goToSection("home")}
+            className="flex items-center gap-2 shrink-0"
+          >
+            <img
+              src="/favicon.ico"
+              alt="FluxFame Logo"
+              className="w-7 h-7 object-contain"
+            />
 
-  <span className="text-2xl font-bold text-white">
-    Flux<span className="text-lime-400">Fame</span>
-  </span>
-</button>
+            <span className="text-2xl font-bold text-white">
+              Flux<span className="text-lime-400">Fame</span>
+            </span>
+          </button>
+
           {/* DESKTOP */}
           <nav className="hidden lg:flex items-center gap-8">
 
-            <NavItem id="home" onClick={() => goToSection("home")}>
+            <NavItem
+              id="home"
+              onClick={() => goToSection("home")}
+            >
               Home
             </NavItem>
 
-            <NavItem id="services" onClick={() => goToSection("services")}>
+            {/* SERVICES — NOW OPENS /services */}
+            <NavItem
+              id="services"
+              to="/services"
+            >
               Services
             </NavItem>
 
-            <NavItem id="case-studies" to="/case-studies">
-              Our Work 
+            <NavItem
+              id="case-studies"
+              to="/case-studies"
+            >
+              Our Work
             </NavItem>
 
-            <NavItem id="process" onClick={() => goToSection("process")}>
+            <NavItem
+              id="process"
+              onClick={() => goToSection("process")}
+            >
               Process
             </NavItem>
 
-            <NavItem id="about" to="/about">
+            <NavItem
+              id="about"
+              to="/about"
+            >
               About
             </NavItem>
 
-            <NavItem id="contact" to="/contact">
+            <NavItem
+              id="contact"
+              to="/contact"
+            >
               Contact
             </NavItem>
 
@@ -187,33 +210,59 @@ export default function Navbar() {
         {/* MOBILE MENU */}
         {menuOpen && (
           <>
-            <div className="fixed inset-0 z-40" onClick={() => setMenuOpen(false)} />
+            <div
+              className="fixed inset-0 z-40"
+              onClick={() => setMenuOpen(false)}
+            />
 
             <div className="lg:hidden mt-3 bg-black/80 backdrop-blur-xl rounded-2xl overflow-hidden relative z-50 border border-white/10">
 
               <nav className="flex flex-col text-base font-medium text-white">
 
-                <button onClick={() => goToSection("home")} className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400">
+                <button
+                  onClick={() => goToSection("home")}
+                  className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400"
+                >
                   Home
                 </button>
 
-                <button onClick={() => goToSection("services")} className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400">
+                {/* SERVICES — NOW OPENS /services */}
+                <Link
+                  to="/services"
+                  onClick={closeMenu}
+                  className="px-6 py-4 border-b border-white/5 hover:text-lime-400"
+                >
                   Services
-                </button>
+                </Link>
 
-                <Link to="/case-studies" onClick={closeMenu} className="px-6 py-4 border-b border-white/5 hover:text-lime-400">
+                <Link
+                  to="/case-studies"
+                  onClick={closeMenu}
+                  className="px-6 py-4 border-b border-white/5 hover:text-lime-400"
+                >
                   Our Work
                 </Link>
 
-                <button onClick={() => goToSection("process")} className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400">
+                <button
+                  onClick={() => goToSection("process")}
+                  className="px-6 py-4 text-left border-b border-white/5 hover:text-lime-400"
+                >
                   Process
                 </button>
 
-                <Link to="/about" onClick={closeMenu} className="px-6 py-4 border-b border-white/5 hover:text-lime-400">
+                <Link
+                  to="/about"
+                  onClick={closeMenu}
+                  className="px-6 py-4 border-b border-white/5 hover:text-lime-400"
+                >
                   About
                 </Link>
 
-                <Link to="/contact" onClick={closeMenu} className="px-6 py-4 hover:text-lime-400">
+                <Link
+                  to="/contact"
+                  onClick={closeMenu}
+                  className="px-6 py-4 hover:text-lime-400"
+                >
                   Contact
                 </Link>
 

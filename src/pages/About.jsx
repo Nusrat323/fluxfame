@@ -1,21 +1,16 @@
 import { useEffect, useState } from "react";
-import MainLayout from "../layouts/MainLayout";
+
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
 export default function About() {
   const [loading, setLoading] = useState(true);
-
-  // Loader
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 900);
     return () => clearTimeout(timer);
   }, []);
-
-  // Counter Component
   const Counter = ({ end, label }) => {
     const [count, setCount] = useState(0);
-
     useEffect(() => {
       let start = 0;
       const duration = 1200;
@@ -30,6 +25,9 @@ export default function About() {
         setCount(Math.floor(start));
       }, 20);
 
+
+
+
       return () => clearInterval(interval);
     }, [end]);
 
@@ -43,7 +41,6 @@ export default function About() {
     );
   };
 
-  // Loader
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center bg-black">
@@ -65,8 +62,6 @@ export default function About() {
       />
       <link rel="canonical" href="https://fluxfame.site/about" />
     </Helmet>
-
-    <MainLayout>
       <div className="pt-32 pb-20 px-4 md:px-10 max-w-6xl mx-auto">
 
         {/* HERO */}
@@ -258,7 +253,6 @@ export default function About() {
         </section>
 
       </div>
-    </MainLayout>
     </>
   );
 }

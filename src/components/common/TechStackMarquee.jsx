@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
 
-/* =========================================================
-   TECHNOLOGIES
-========================================================= */
-
 const technologies = [
   {
     name: "GoHighLevel",
@@ -38,11 +34,6 @@ const technologies = [
     icon: <TailwindIcon />,
   },
 ];
-
-/* =========================================================
-   TECH ITEM
-   No cards — only icon + text + separator
-========================================================= */
 
 function TechItem({ technology }) {
   return (
@@ -84,7 +75,7 @@ function TechItem({ technology }) {
       >
         {technology.icon}
 
-        {/* Tiny icon glow */}
+        
         <span
           className="
             pointer-events-none
@@ -118,8 +109,6 @@ function TechItem({ technology }) {
       >
         {technology.name}
       </span>
-
-      {/* Shiny lime separator */}
       <span
         className="
           relative
@@ -138,8 +127,6 @@ function TechItem({ technology }) {
           group-hover:shadow-[0_0_6px_rgba(163,230,53,1),0_0_16px_rgba(163,230,53,0.65)]
         "
       />
-
-      {/* Tiny animated shine passing over item */}
       <motion.span
         className="
           pointer-events-none
@@ -170,15 +157,7 @@ function TechItem({ technology }) {
   );
 }
 
-/* =========================================================
-   MARQUEE
-========================================================= */
-
 export default function TechStackMarquee() {
-  /*
-    Three copies give the track enough width to avoid
-    visible gaps on larger screens.
-  */
   const items = [
     ...technologies,
     ...technologies,
@@ -194,9 +173,6 @@ export default function TechStackMarquee() {
         py-2
       "
     >
-      {/* ===================================================
-          VERY SUBTLE AMBIENT GLOW
-      =================================================== */}
 
       <div
         className="
@@ -214,10 +190,6 @@ export default function TechStackMarquee() {
         "
       />
 
-      {/* ===================================================
-          SUBTLE CENTER LIGHT
-      =================================================== */}
-
       <div
         className="
           pointer-events-none
@@ -234,11 +206,6 @@ export default function TechStackMarquee() {
           to-transparent
         "
       />
-
-      {/* ===================================================
-          LEFT FADE
-      =================================================== */}
-
       <div
         className="
           pointer-events-none
@@ -255,9 +222,6 @@ export default function TechStackMarquee() {
         "
       />
 
-      {/* ===================================================
-          RIGHT FADE
-      =================================================== */}
 
       <div
         className="
@@ -274,17 +238,6 @@ export default function TechStackMarquee() {
           sm:w-28
         "
       />
-
-      {/* ===================================================
-          MARQUEE TRACK
-
-          IMPORTANT:
-          No background.
-          No border.
-          No card.
-          No rounded container.
-      =================================================== */}
-
       <motion.div
         className="
           relative
@@ -315,10 +268,6 @@ export default function TechStackMarquee() {
     </section>
   );
 }
-
-/* =========================================================
-   GOHIGHLEVEL / GROWTH ICON
-========================================================= */
 
 function GoHighLevelIcon() {
   return (
@@ -381,10 +330,6 @@ function GoHighLevelIcon() {
   );
 }
 
-/* =========================================================
-   OPENAI ICON
-========================================================= */
-
 function OpenAIIcon() {
   return (
     <svg
@@ -393,7 +338,7 @@ function OpenAIIcon() {
       fill="none"
       aria-hidden="true"
     >
-      {/* OpenAI knot */}
+      
       <path
         d="
           M19.45 9.4
@@ -441,10 +386,6 @@ function OpenAIIcon() {
     </svg>
   );
 }
-
-/* =========================================================
-   GOOGLE ICON
-========================================================= */
 
 function GoogleIcon() {
   return (
@@ -504,10 +445,6 @@ function GoogleIcon() {
   );
 }
 
-/* =========================================================
-   META ICON
-========================================================= */
-
 function MetaIcon() {
   return (
     <svg
@@ -549,10 +486,6 @@ function MetaIcon() {
     </svg>
   );
 }
-
-/* =========================================================
-   INSTAGRAM ICON
-========================================================= */
 
 function InstagramIcon() {
   return (
@@ -606,10 +539,6 @@ function InstagramIcon() {
   );
 }
 
-/* =========================================================
-   WHATSAPP ICON
-========================================================= */
-
 function WhatsAppIcon() {
   return (
     <svg
@@ -653,9 +582,6 @@ function WhatsAppIcon() {
   );
 }
 
-/* =========================================================
-   REACT ICON
-========================================================= */
 
 function ReactIcon() {
   return (
@@ -703,10 +629,6 @@ function ReactIcon() {
     </svg>
   );
 }
-
-/* =========================================================
-   TAILWIND ICON
-========================================================= */
 
 function TailwindIcon() {
   return (

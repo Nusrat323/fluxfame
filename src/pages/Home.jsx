@@ -1,45 +1,39 @@
-import MainLayout from "../layouts/MainLayout";
 import Hero from "../components/home/Hero";
-import ServicesPreview from "../components/home/ServicesPreview";
 import Process from "../components/home/Process";
 import TestimonialsSection from "../components/home/TestimonialsSection";
 import FAQ from "../components/home/FAQ";
 import TechStackMarquee from "../components/common/TechStackMarquee";
+import ProblemSolution from "../components/home/ProblemSolution";
+import ShowcasePreviewSection from "../components/home/ShowcasePreviewSection";
+import CTASection from "../components/home/CTASection";
 
 export default function Home() {
   return (
-    <MainLayout>
-
-     
+    <>
       <div id="home">
         <Hero />
-        
       </div>
 
-     
-      <section id="services" className="relative">
-        <div className="glass-wrapper w-full">
-        <TechStackMarquee/>
-          <ServicesPreview />
-        </div>
-      </section>
+      <TechStackMarquee />
 
-      
+      <ProblemSolution />
+
       <section id="process">
         <Process />
       </section>
 
-      
-      <section id="testimonials">
-        <TestimonialsSection />
-      </section>
+      <ShowcasePreviewSection />
 
-      
       <section id="faq">
         <FAQ />
       </section>
 
-    </MainLayout>
+      <section id="testimonials">
+        <TestimonialsSection />
+      </section>
+
+      <CTASection />
+    </>
   );
 }
 

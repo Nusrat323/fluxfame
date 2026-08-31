@@ -1,888 +1,404 @@
 import {
-    FaCheckCircle,
-    
-    FaCalendarCheck,
-    FaStar,
-    FaRedo,
-  } from "react-icons/fa";
-  import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
-  
-  export default function CaseStudyPreview() {
-    return (
-      <section className="relative py-16 overflow-hidden">
-  
-        {/* Background Glow */}
-        <div className="absolute top-20 left-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-lime-400/10 blur-[150px] rounded-full" />
-  
-        <div className="container-custom px-3 sm:px-6 lg:px-0 relative z-10">
-  
-          {/* CASE STUDY CARD */}
-  
-          <div
-               className="
-               relative
-               overflow-hidden
-             
-               rounded-[30px]
-             
-              bg-white/[0.06]
-              backdrop-blur-[40px]
-             
-               border border-white/10
-             
-               shadow-[0_0_60px_rgba(217,255,47,.05)]
-             
-               grid
-               lg:grid-cols-2
-             
-               min-h-[550px]
-             "
-          >
-  
-            {/* CENTER DIVIDER */}
-  
-            <div className="hidden lg:block absolute left-1/2 top-0 w-px h-full bg-white/10" />
-  
-            {/* TOP CENTER */}
-<div
-  className="
-    absolute
-    top-0
-    left-1/2
-    -translate-x-1/2
-
-    w-40
-    h-[1.5px]
-
-    bg-gradient-to-r
-    from-transparent
-    via-lime-400/70
-    to-transparent
-
-    blur-[1px]
-  "
-/>
-
-{/* BOTTOM CENTER */}
-<div
-  className="
-    absolute
-    bottom-0
-    left-1/2
-    -translate-x-1/2
-
-    w-40
-    h-[1.5px]
-
-    bg-gradient-to-r
-    from-transparent
-    via-lime-400/70
-    to-transparent
-
-    blur-[1px]
-  "
-/>
-
-{/* LEFT CENTER */}
-<div
-  className="
-    absolute
-    left-0
-    top-1/2
-    -translate-y-1/2
-
-    w-[1.5px]
-    h-40
-
-    bg-gradient-to-b
-    from-transparent
-    via-lime-400/70
-    to-transparent
-
-    blur-[1px]
-  "
-/>
-
-{/* RIGHT CENTER */}
-<div
-  className="
-    absolute
-    right-0
-    top-1/2
-    -translate-y-1/2
-
-    w-[1.5px]
-    h-40
-
-    bg-gradient-to-b
-    from-transparent
-    via-lime-400/70
-    to-transparent
-
-    blur-[1px]
-  "
-/>
-
-{/* SOFT TOP GLOW */}
-<div
-  className="
-    absolute
-    top-0
-    left-1/2
-    -translate-x-1/2
-
-    w-56
-    h-20
-
-    bg-lime-400/8
-    blur-[60px]
-
-    pointer-events-none
-  "
-/>
-
-{/* SOFT BOTTOM GLOW */}
-<div
-  className="
-    absolute
-    bottom-0
-    left-1/2
-    -translate-x-1/2
-
-    w-56
-    h-20
-
-    bg-lime-400/8
-    blur-[60px]
-
-    pointer-events-none
-  "
-/>
-
-{/* SOFT LEFT GLOW */}
-<div
-  className="
-    absolute
-    left-0
-    top-1/2
-    -translate-y-1/2
-
-    w-20
-    h-56
-
-    bg-lime-400/6
-    blur-[60px]
-
-    pointer-events-none
-  "
-/>
-
-{/* SOFT RIGHT GLOW */}
-<div
-  className="
-    absolute
-    right-0
-    top-1/2
-    -translate-y-1/2
-
-    w-20
-    h-56
-
-    bg-lime-400/6
-    blur-[60px]
-
-    pointer-events-none
-  "
-/>
-
-
-<div
-  className="
-    hidden
-    lg:block
-
-    absolute
-    left-1/2
-    top-0
-
-    w-px
-    h-full
-
-    bg-white/5
-  "
-/>
-
-{/* DIVIDER MIDDLE GLOW */}
-<div
-  className="
-    hidden
-    lg:block
-
-    absolute
-    left-1/2
-    top-1/2
-
-    -translate-x-1/2
-    -translate-y-1/2
-
-    w-[1.5px]
-    h-40
-
-    bg-gradient-to-b
-    from-transparent
-    via-lime-400/20
-    to-transparent
-
-    blur-[1px]
-  "
-/>
-
-{/* DIVIDER SOFT GLOW */}
-<div
-  className="
-    hidden
-    lg:block
-
-    absolute
-    left-1/2
-    top-1/2
-
-    -translate-x-1/2
-    -translate-y-1/2
-
-    w-10
-    h-48
-
-    bg-lime-400/10
-
-    blur-[50px]
-
-    pointer-events-none
-  "
-/>
-  
-            {/* LEFT SIDE */}
-  
-            <div className="p-8 lg:p-12">
-  
-              {/* Badge */}
-  
-              <div
-                className="
-                  glass
-                  inline-flex
-                  items-center
-  
-                  px-4
-                  py-2
-  
-                  rounded-full
-  
-                  text-lime-400
-                  text-xs
-  
-                  mb-8
-                "
-              >
-                ✦ CASE STUDY
-              </div>
-  
-              {/* Heading */}
-  
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight">
-                Dental Clinic
-                <br />
-                <span className="gradient-text">
-                  Automation
-                </span>
-              </h2>
-  
-              {/* Description */}
-  
-              <p className="text-gray-400 mt-6 text-base lg:text-lg leading-relaxed max-w-xl">
-                We built a complete automation system for a
-                dental clinic to increase bookings, reduce
-                no-shows and improve patient communication.
-              </p>
-  
-              {/* Features */}
-  
-              <div className="grid sm:grid-cols-2 gap-4 mt-10">
-  
-                <div className="flex items-center gap-3">
-                  <FaCheckCircle className="text-lime-400" />
-                  <span>AI Receptionist & Chatbot</span>
-                </div>
-  
-                <div className="flex items-center gap-3">
-                  <FaCheckCircle className="text-lime-400" />
-                  <span>Review Automation</span>
-                </div>
-  
-                <div className="flex items-center gap-3">
-                  <FaCheckCircle className="text-lime-400" />
-                  <span>Appointment Workflow</span>
-                </div>
-  
-                <div className="flex items-center gap-3">
-                  <FaCheckCircle className="text-lime-400" />
-                  <span>Reactivation Campaign</span>
-                </div>
-  
-                <div className="flex items-center gap-3">
-                  <FaCheckCircle className="text-lime-400" />
-                  <span>No Show Recovery</span>
-                </div>
-  
-                <div className="flex items-center gap-3">
-                  <FaCheckCircle className="text-lime-400" />
-                  <span>CRM Automation</span>
-                </div>
-  
-              </div>
-  
-              {/* Button */}
-             
-              <Link
-  to="/case-studies"
-  className="
-    mt-10
-    w-full
-    sm:w-fit
-    bg-lime-400
-    text-black
-    font-semibold
-    px-8
-    py-4
-    rounded-2xl
-    flex
-    items-center
-    justify-center
-    gap-3
-    hover:scale-105
-    transition-all
-  "
->
-  View Full Case Study
-  <FaArrowRight />
-</Link>
-            </div>
-  
-            {/* RIGHT SIDE */}
-  
-            <div className="p-8 lg:p-10">
-  
-              {/* TOP STATS */}
-  
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-  
-              <div className="
-relative
-overflow-hidden
-glass
-rounded-3xl
-p-5
-">
-
-  <div className="
-    absolute
-    bottom-0
-    left-[5%]
-    w-[90%]
-    h-[1.5px]
-    bg-gradient-to-r
-    from-transparent
-    via-lime-400/80
-    to-transparent
-  "/>
-
-  <p className="text-gray-400 text-sm">
-    Total Appointments
-  </p>
-
-  <h3 className="text-4xl font-bold mt-2">
-    312
-  </h3>
-
-  <span className="text-lime-400">
-    +42.5%
-  </span>
-
-</div>
-  
-<div className="
-relative
-overflow-hidden
-glass
-rounded-3xl
-p-5
-">
-
-  <div className="
-    absolute
-    bottom-0
-    left-[10%]
-    w-[80%]
-    h-[1.5px]
-    bg-gradient-to-r
-    from-transparent
-    via-lime-400/70
-    to-transparent
-  "/>
-
-  <p className="text-gray-400 text-sm">
-    New Patients
-  </p>
-
-  <h3 className="text-4xl font-bold mt-2">
-    128
-  </h3>
-
-  <span className="text-lime-400">
-    +28.1%
-  </span>
-
-</div> 
-
-
-                <div className="glass rounded-3xl p-5">
-                  <p className="text-gray-400 text-sm">
-                    No Show Rate
-                  </p>
-  
-                  <h3 className="text-4xl font-bold mt-2">
-                    8%
-                  </h3>
-  
-                  <span className="text-lime-400">
-                    +35.4%
-                  </span>
-                </div>
-  
-              </div>
-  
-              
-  
-              {/* CHART + WORKFLOWS */}
-
-<div className="grid lg:grid-cols-[1.5fr_.9fr] gap-5 mt-5">
-
-{/* CHART */}
-<div
-  className="
-    relative
-    overflow-hidden
-    rounded-3xl
-    p-5
-    bg-white/[0.05]
-    backdrop-blur-[20px]
-    border border-white/[0.05]
-    shadow-[inset_0_1px_0_rgba(255,255,255,.05)]
-  "
->
-  {/* LEFT BG GLOW */}
-  <div
-    className="
-      absolute
-      top-0
-      left-0
-      w-52
-      h-full
-      bg-lime-400/5
-      blur-[90px]
-      pointer-events-none
-    "
-  />
-
-  {/* TOP RIGHT BORDER GLOW */}
-  <div
-    className="
-      absolute
-      top-0
-      right-8
-      w-30
-      h-[1.5px]
-      bg-gradient-to-l
-      from-lime-400/70
-      to-transparent
-      
-    "
-  />
-
-  <h4 className="mb-5 font-medium">
-    Appointments Overview
-  </h4>
-
-  <svg
-    viewBox="0 0 300 140"
-    className="w-full h-[220px]"
-  >
-    <defs>
-      <linearGradient
-        id="chartFill"
-        x1="0"
-        y1="0"
-        x2="0"
-        y2="1"
-      >
-        <stop
-          offset="0%"
-          stopColor="#d9ff2f"
-          stopOpacity="0.30"
-        />
-
-        <stop
-          offset="100%"
-          stopColor="#d9ff2f"
-          stopOpacity="0"
-        />
-      </linearGradient>
-
-      <filter
-        id="chartGlow"
-        x="-50%"
-        y="-50%"
-        width="200%"
-        height="200%"
-      >
-        <feGaussianBlur
-          stdDeviation="4"
-          result="blur"
-        />
-
-        <feMerge>
-          <feMergeNode in="blur" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-    </defs>
-
-    {/* GRID */}
-    <line
-      x1="25"
-      y1="20"
-      x2="300"
-      y2="20"
-      stroke="rgba(255,255,255,.08)"
-      strokeDasharray="4 4"
-    />
-
-    <line
-      x1="25"
-      y1="50"
-      x2="300"
-      y2="50"
-      stroke="rgba(255,255,255,.08)"
-      strokeDasharray="4 4"
-    />
-
-    <line
-      x1="25"
-      y1="80"
-      x2="300"
-      y2="80"
-      stroke="rgba(255,255,255,.08)"
-      strokeDasharray="4 4"
-    />
-
-    <line
-      x1="25"
-      y1="110"
-      x2="300"
-      y2="110"
-      stroke="rgba(255,255,255,.08)"
-      strokeDasharray="4 4"
-    />
-
- 
-    <text
-      x="0"
-      y="22"
-      fill="#6b7280"
-      fontSize="10"
-    >
-      100
-    </text>
-
-    <text
-      x="5"
-      y="52"
-      fill="#6b7280"
-      fontSize="10"
-    >
-      75
-    </text>
-
-    <text
-      x="5"
-      y="82"
-      fill="#6b7280"
-      fontSize="10"
-    >
-      50
-    </text>
-
-    <text
-      x="5"
-      y="112"
-      fill="#6b7280"
-      fontSize="10"
-    >
-      25
-    </text>
-
-    {/* AREA FILL */}
-    <path
-      d="
-      M25 100
-      C50 85,70 40,95 60
-      C125 90,150 25,180 45
-      C210 65,235 15,265 25
-      C280 30,292 15,300 10
-      L300 140
-      L25 140
-      Z
-      "
-      fill="url(#chartFill)"
-    />
-
-    {/* GLOW LINE */}
-    <path
-      d="
-      M25 100
-      C50 85,70 40,95 60
-      C125 90,150 25,180 45
-      C210 65,235 15,265 25
-      C280 30,292 15,300 10
-      "
-      fill="none"
-      stroke="#d9ff2f"
-      strokeWidth="10"
-      opacity=".12"
-      strokeLinecap="round"
-    />
-
-    {/* MAIN LINE */}
-    <path
-      d="
-      M25 100
-      C50 85,70 40,95 60
-      C125 90,150 25,180 45
-      C210 65,235 15,265 25
-      C280 30,292 15,300 10
-      "
-      fill="none"
-      stroke="#d9ff2f"
-      strokeWidth="4"
-      filter="url(#chartGlow)"
-      strokeLinecap="round"
-    />
-
-    {/* DATA POINTS */}
-    <circle cx="25" cy="100" r="4" fill="#d9ff2f" />
-    <circle cx="95" cy="60" r="4" fill="#d9ff2f" />
-    <circle cx="180" cy="45" r="4" fill="#d9ff2f" />
-    <circle cx="265" cy="25" r="4" fill="#d9ff2f" />
-
-    {/* LAST POINT */}
-    <circle
-      cx="300"
-      cy="10"
-      r="12"
-      fill="#d9ff2f"
-      opacity=".15"
-    />
-
-    <circle
-      cx="300"
-      cy="10"
-      r="5"
-      fill="#d9ff2f"
-    />
-  </svg>
-
-  {/* X AXIS */}
-  <div
-    className="
-      flex
-      justify-between
-      text-xs
-      text-gray-500
-      mt-1
-      pl-6
-    "
-  >
-    <span>1 May</span>
-    <span>8 May</span>
-    <span>15 May</span>
-    <span>22 May</span>
-    <span>29 May</span>
-  </div>
-</div>
-
-
-
-
-
-
-{/* WORKFLOWS CARD */}
-<div
-  className="
-    relative
-    overflow-hidden
-    glass
-    rounded-3xl
-    p-3
-  "
->
-
-  {/* LEFT BORDER GLOW */}
-  <div
-    className="
-      absolute
-      top-0
-      left-0
-      w-[1.5px]
-      h-40
-      bg-gradient-to-b
-      from-lime-400/50
-      to-transparent
-    "
-  />
-
-  {/* TOP BORDER GLOW */}
-  <div
-    className="
-      absolute
-      top-0
-      left-0
-      w-40
-      h-[1.5px]
-      bg-gradient-to-r
-      from-lime-300/50
-      to-transparent
-    "
-  />
-
-  <h4 className="mb-3 mt-2 font-medium text-center">
-    Top Performing Workflows
-  </h4>
-
-  <div className="space-y-3">
-
-    {/* Reminder */}
-    <div
-      className="
-        bg-white/[0.04]
-        border border-white/[0.05]
-        rounded-2xl
-        p-3
-      "
-    >
-      <div className="flex justify-between">
-
-        <div className="flex items-center gap-1">
-          <FaCalendarCheck className="text-lime-400" />
-          Reminder
+  FaRobot,
+  FaComments,
+  FaCalendarCheck,
+  FaUserCheck,
+  FaArrowRight,
+  FaCheckCircle,
+  FaChartLine,
+} from "react-icons/fa";
+
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const ease = [0.16, 1, 0.3, 1];
+
+const automationSteps = [
+  {
+    icon: FaComments,
+    title: "Lead Arrives",
+    description: "New lead enters your system.",
+  },
+  {
+    icon: FaRobot,
+    title: "AI Responds",
+    description: "Instant reply + qualification.",
+  },
+  {
+    icon: FaUserCheck,
+    title: "Lead Qualified",
+    description: "High-intent leads are identified.",
+  },
+  {
+    icon: FaCalendarCheck,
+    title: "Appointment Booked",
+    description: "Qualified leads move to booking.",
+  },
+];
+
+const benefits = [
+  "Instant response",
+  "AI qualification",
+  "CRM automation",
+  "Automated follow-up",
+];
+
+const growthData = [
+  { month: "Jan", value: 18 },
+  { month: "Feb", value: 25 },
+  { month: "Mar", value: 32 },
+  { month: "Apr", value: 40 },
+  { month: "May", value: 48 },
+  { month: "Jun", value: 55 },
+  { month: "Jul", value: 63 },
+  { month: "Aug", value: 70 },
+  { month: "Sep", value: 77 },
+  { month: "Oct", value: 84 },
+  { month: "Nov", value: 91 },
+  { month: "Dec", value: 100 },
+];
+
+export default function CaseStudyPreview() {
+  return (
+    <div className="relative h-full overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.055] p-5 shadow-[0_0_60px_rgba(217,255,47,.045)] backdrop-blur-[30px] sm:p-6">
+      {/* BACKGROUND GLOW */}
+
+      <div className="pointer-events-none absolute -left-20 -top-20 h-56 w-56 rounded-full bg-lime-400/10 blur-[90px]" />
+
+      <div className="pointer-events-none absolute -bottom-24 -right-20 h-64 w-64 rounded-full bg-lime-400/8 blur-[100px]" />
+
+      {/* HEADER */}
+
+      <div className="relative z-10 mb-4 flex items-start justify-between gap-4">
+        <div>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-lime-400">
+            AI Automation
+          </p>
+
+          <h3 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">
+            Your Business
+            <br />
+            <span className="gradient-text">
+              After Automation
+            </span>
+          </h3>
         </div>
 
-        <span className="text-lime-400">
-          +160
-        </span>
-
-      </div>
-
-      <div
-        className="
-          mt-3
-          h-px
-          bg-gradient-to-r
-          from-lime-400/40
-          to-transparent
-        "
-      />
-    </div>
-
-    {/* Reviews */}
-    <div
-      className="
-        bg-white/[0.04]
-        border border-white/[0.05]
-        rounded-2xl
-        p-3
-      "
-    >
-      <div className="flex justify-between">
-
-        <div className="flex items-center gap-1">
-          <FaStar className="text-lime-400" />
-          Reviews
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-lime-400/20 bg-lime-400/10 text-lime-400 shadow-[0_0_25px_rgba(217,255,47,.08)]">
+          <FaRobot />
         </div>
-
-        <span className="text-lime-400">
-          +86
-        </span>
-
       </div>
 
-      <div
-        className="
-          mt-3
-          h-px
-          bg-gradient-to-r
-          from-lime-400/40
-          to-transparent
-        "
-      />
-    </div>
+      {/* AUTOMATION FLOW */}
 
-    {/* Reactivation */}
-    <div
-      className="
-        bg-white/[0.04]
-        border border-white/[0.05]
-        rounded-2xl
-        p-3
-      "
-    >
-      <div className="flex justify-between">
+      <div className="relative z-10 mt-5 rounded-2xl border border-white/[0.08] bg-black/20 p-4">
+        <div className="mb-4 flex items-center justify-between">
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.16em] text-gray-500">
+              Automated Journey
+            </p>
 
-        <div className="flex items-center gap-1">
-          <FaRedo className="text-lime-400" />
-          Reactivation
-        </div>
-
-        <span className="text-lime-400">
-          +71
-        </span>
-
-      </div>
-
-      <div
-        className="
-          mt-3
-          h-px
-          bg-gradient-to-r
-          from-lime-400/40
-          to-transparent
-        "
-      />
-    </div>
-
-  </div>
-</div>
-
-</div>
-              </div>
-  
-            </div>
-  
+            <p className="mt-1 text-sm font-semibold text-white">
+              Lead → Appointment
+            </p>
           </div>
-  
-        
-  
-      </section>
-    );
-  }
+
+          <div className="flex items-center gap-2 text-[10px] text-lime-400">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-lime-400" />
+            Live
+          </div>
+        </div>
+
+        <div className="space-y-2.5">
+          {automationSteps.map((step, index) => {
+            const Icon = step.icon;
+
+            return (
+              <motion.div
+                key={step.title}
+                initial={{
+                  opacity: 0,
+                  x: -15,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.3,
+                }}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.08,
+                  ease,
+                }}
+              >
+                <div
+                  className="
+                    group
+                    flex
+                    items-center
+                    gap-3
+                    rounded-xl
+                    border
+                    border-white/[0.07]
+                    bg-white/[0.035]
+                    p-3
+                    transition-all
+                    duration-300
+                    hover:border-lime-400/20
+                    hover:bg-white/[0.055]
+                  "
+                >
+                  <div
+                    className="
+                      flex
+                      h-9
+                      w-9
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-xl
+                      bg-lime-400/10
+                      text-sm
+                      text-lime-400
+                      transition-transform
+                      duration-300
+                      group-hover:scale-105
+                    "
+                  >
+                    <Icon />
+                  </div>
+
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-white">
+                      {step.title}
+                    </p>
+
+                    <p className="mt-0.5 text-xs leading-relaxed text-gray-500">
+                      {step.description}
+                    </p>
+                  </div>
+
+                  <FaCheckCircle className="ml-auto shrink-0 text-xs text-lime-400/70" />
+                </div>
+
+                {index !== automationSteps.length - 1 && (
+                  <div className="ml-[17px] h-2.5 w-px bg-gradient-to-b from-lime-400/30 to-transparent" />
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* GROWTH VISUAL */}
+
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 20,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.25,
+        }}
+        transition={{
+          duration: 0.5,
+          delay: 0.15,
+          ease,
+        }}
+        className="relative z-10 mt-4 overflow-hidden rounded-2xl border border-white/[0.08] bg-black/20 p-4"
+      >
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.16em] text-gray-500">
+              Growth Momentum
+            </p>
+
+            <div className="mt-1 flex items-center gap-2">
+              <FaChartLine className="text-xs text-lime-400" />
+
+              <p className="text-sm font-semibold text-white">
+                Business Growth
+              </p>
+            </div>
+          </div>
+
+          <span className="rounded-full border border-lime-400/15 bg-lime-400/[0.06] px-2.5 py-1 text-[9px] font-medium text-lime-300">
+            2026
+          </span>
+        </div>
+
+        {/* CHART */}
+
+        <div className="mt-5 flex h-[105px] items-end gap-[5px] sm:gap-2">
+          {growthData.map((item, index) => (
+            <div
+              key={item.month}
+              className="flex h-full flex-1 flex-col items-center justify-end gap-1.5"
+            >
+              <div className="flex h-[78px] w-full items-end">
+                <motion.div
+                  initial={{
+                    height: 0,
+                  }}
+                  whileInView={{
+                    height: `${item.value}%`,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.3,
+                  }}
+                  transition={{
+                    duration: 0.55,
+                    delay: 0.35 + index * 0.055,
+                    ease,
+                  }}
+                  className="
+                    relative
+                    w-full
+                    min-w-[4px]
+                    overflow-hidden
+                    rounded-t-[5px]
+                    bg-gradient-to-t
+                    from-lime-500/30
+                    via-lime-400/60
+                    to-lime-300
+                  "
+                >
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    transition={{
+                      delay: 0.5 + index * 0.055,
+                    }}
+                    className="absolute inset-x-0 top-0 h-px bg-lime-200/80"
+                  />
+                </motion.div>
+              </div>
+
+              <span className="text-[7px] text-white/30 sm:text-[8px]">
+                {item.month}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* CHART FOOTER */}
+
+        <div className="mt-3 flex items-center justify-between border-t border-white/[0.06] pt-3">
+          <div>
+            <p className="text-[8px] uppercase tracking-wider text-white/25">
+              Lead Flow
+            </p>
+
+            <p className="mt-0.5 text-xs font-semibold text-white/70">
+              Increasing
+            </p>
+          </div>
+
+          <div className="text-right">
+            <p className="text-[8px] uppercase tracking-wider text-white/25">
+              Momentum
+            </p>
+
+            <p className="mt-0.5 text-xs font-semibold text-lime-400">
+              ↑ Growing
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* BENEFITS */}
+
+      <div className="relative z-10 mt-4 grid grid-cols-2 gap-2">
+        {benefits.map((benefit, index) => (
+          <motion.div
+            key={benefit}
+            initial={{
+              opacity: 0,
+              y: 8,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.3,
+              delay: 0.25 + index * 0.05,
+              ease,
+            }}
+            className="
+              flex
+              items-center
+              gap-2
+              rounded-xl
+              border
+              border-white/[0.06]
+              bg-white/[0.025]
+              px-3
+              py-2.5
+            "
+          >
+            <FaCheckCircle className="shrink-0 text-xs text-lime-400" />
+
+            <span className="text-xs text-white/80">
+              {benefit}
+            </span>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* CTA */}
+
+      <Link
+        to="/services?service=automation"
+        className="
+          relative
+          z-10
+          mt-5
+          flex
+          w-full
+          items-center
+          justify-center
+          gap-2
+          rounded-2xl
+          border
+          border-lime-400/20
+          bg-lime-400/10
+          px-5
+          py-3
+          text-sm
+          font-semibold
+          text-lime-400
+          transition-all
+          duration-300
+          hover:border-lime-400/40
+          hover:bg-lime-400
+          hover:text-black
+          hover:shadow-[0_0_30px_rgba(163,230,53,0.15)]
+        "
+      >
+        Explore Our Automation Systems
+
+        <FaArrowRight className="text-xs transition-transform duration-200 group-hover:translate-x-1" />
+      </Link>
+    </div>
+  );
+}

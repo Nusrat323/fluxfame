@@ -1,6 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-
-import MainLayout from "../layouts/MainLayout";
 import CaseStudyCard from "../components/case-studies/CaseStudyCard";
 import AnimatedSection from "../components/common/AnimatedSection";
 
@@ -92,7 +90,7 @@ export default function CaseStudies() {
         />
       </Helmet>
 
-      <MainLayout>
+     
         <section
           className="
             relative
@@ -485,7 +483,7 @@ export default function CaseStudies() {
         </section>
 
         <CTASection />
-      </MainLayout>
+     
     </>
   );
 }

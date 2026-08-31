@@ -1,4 +1,4 @@
-import MainLayout from "../layouts/MainLayout";
+
 import { Helmet } from "react-helmet-async";
 export default function PrivacyPolicy() {
   return (
@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
       />
       <link rel="canonical" href="https://fluxfame.site/privacy" />
     </Helmet>
-    <MainLayout>
+    
       <section className="pt-32 pb-20 px-4 max-w-4xl mx-auto text-gray-300">
 
         
@@ -80,7 +80,7 @@ export default function PrivacyPolicy() {
         </p>
 
       </section>
-    </MainLayout>
+    
     </>
   );
 }

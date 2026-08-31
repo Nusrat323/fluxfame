@@ -69,11 +69,6 @@ export default function FAQ() {
 
   return (
     <section className="relative py-24 overflow-hidden">
-
-      {/* =====================================================
-          BACKGROUND GLOW
-      ===================================================== */}
-
       <div className="absolute inset-0 pointer-events-none">
 
         <motion.div
@@ -120,11 +115,6 @@ export default function FAQ() {
       </div>
 
       <div className="container-custom relative z-10">
-
-        {/* =====================================================
-            BADGE
-        ===================================================== */}
-
         <motion.div
           initial={{
             opacity: 0,
@@ -160,10 +150,6 @@ export default function FAQ() {
             ✦ FAQ
           </div>
         </motion.div>
-
-        {/* =====================================================
-            HEADING
-        ===================================================== */}
 
         <motion.div
           initial={{
@@ -210,10 +196,6 @@ export default function FAQ() {
             digital project.
           </p>
         </motion.div>
-
-        {/* =====================================================
-            FAQ LIST
-        ===================================================== */}
 
         <div className="max-w-4xl mx-auto space-y-4">
 
@@ -275,10 +257,6 @@ export default function FAQ() {
                   "
                 >
 
-                  {/* =================================================
-                      TOP GLOW
-                  ================================================= */}
-
                   <motion.div
                     animate={{
                       width: isActive ? "55%" : "32%",
@@ -303,10 +281,6 @@ export default function FAQ() {
                     "
                   />
 
-                  {/* =================================================
-                      SOFT ACTIVE GLOW
-                  ================================================= */}
-
                   <motion.div
                     animate={{
                       opacity: isActive ? 1 : 0,
@@ -327,10 +301,7 @@ export default function FAQ() {
                     "
                   />
 
-                  {/* =================================================
-                      QUESTION BUTTON
-                  ================================================= */}
-
+                 
                   <button
                     type="button"
                     onClick={() =>
@@ -403,11 +374,6 @@ export default function FAQ() {
                     </motion.div>
 
                   </button>
-
-                  {/* =================================================
-                      ANSWER
-                  ================================================= */}
-
                   <AnimatePresence initial={false}>
                     {isActive && (
                       <motion.div
@@ -491,11 +457,6 @@ export default function FAQ() {
                       </motion.div>
                     )}
                   </AnimatePresence>
-
-                  {/* =================================================
-                      BOTTOM ACCENT
-                  ================================================= */}
-
                   <motion.div
                     animate={{
                       scaleX: isActive ? 1 : 0,

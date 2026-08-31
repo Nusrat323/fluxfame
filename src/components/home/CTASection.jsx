@@ -17,8 +17,8 @@ export default function CTASection() {
     },
     {
       icon: <FaProjectDiagram />,
-      title: "Frontend",
-      subtitle: "Web Development",
+      title: "Complete Websites",
+      subtitle: "Business Solutions",
     },
     {
       icon: <FaChartLine />,
@@ -39,14 +39,12 @@ export default function CTASection() {
 
   return (
     <section className="relative py-16 lg:py-20 overflow-hidden">
-      {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[350px] h-[120px] bg-lime-400/10 blur-[90px]" />
       </div>
 
       <div className="container-custom relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* MAIN CTA CARD */}
           <div
             className="
               relative overflow-hidden
@@ -58,10 +56,8 @@ export default function CTASection() {
               px-6 py-4 lg:px-8 lg:py-5
             "
           >
-            {/* TOP LEFT GLOW */}
             <div className="absolute top-0 left-0 w-50 h-px bg-gradient-to-r from-lime-400/70 to-transparent" />
 
-            {/* BOTTOM RIGHT GLOW */}
             <div className="absolute bottom-0 right-0 w-40 h-px bg-gradient-to-l from-lime-400/50 to-transparent" />
 
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
@@ -71,7 +67,7 @@ export default function CTASection() {
                 </h2>
 
                 <p className="text-gray-400 mt-3 max-w-xl text-sm lg:text-base">
-                  From modern frontend websites to AI-powered automation
+                  From complete business websites to AI-powered automation
                   systems, we create scalable digital solutions that help
                   businesses grow, improve efficiency, and deliver better
                   customer experiences.
@@ -98,7 +94,6 @@ export default function CTASection() {
             </div>
           </div>
 
-          {/* FEATURES CARD */}
           <div
             className="
               mt-3

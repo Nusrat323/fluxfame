@@ -1,4 +1,4 @@
-import MainLayout from "../layouts/MainLayout";
+
 import { Helmet } from "react-helmet-async";
 
 export default function Terms() {
@@ -12,7 +12,7 @@ export default function Terms() {
       />
       <link rel="canonical" href="https://fluxfame.site/terms" />
     </Helmet>
-    <MainLayout>
+    
       <section className="pt-32 pb-20 px-4 max-w-4xl mx-auto text-gray-300">
 
         
@@ -85,7 +85,7 @@ export default function Terms() {
         </p>
 
       </section>
-    </MainLayout>
+   
     </>
   );
 }

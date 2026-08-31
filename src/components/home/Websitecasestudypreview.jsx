@@ -1,217 +1,200 @@
-import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
+import {
+  FaCheckCircle,
+  FaArrowRight,
+  FaGlobe,
+  FaBolt,
+} from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 const features = [
   "Custom UI/UX Design",
   "Fully Responsive Experience",
+  "Conversion-Focused Layout",
   "Product & Shopping Experience",
-  "Cart & Checkout Flow",
-  "Customer Account Pages",
-  "Admin Management System",
-  "Performance Optimized",
-  "SEO Friendly Structure",
+  "Fast & Performance Optimized",
+  "SEO-Friendly Structure",
+  "Clear Calls To Action",
+  "Modern Customer Experience",
 ];
 
-export default function WebsiteCaseStudyPreview() {
+export default function WebsiteShowcasePreview() {
   return (
-    <section className="relative overflow-hidden py-10">
-      {/* BACKGROUND GLOW */}
-      <div className="absolute left-20 top-20 h-72 w-72 rounded-full bg-lime-400/10 blur-[150px]" />
-      <div className="absolute bottom-20 right-20 h-72 w-72 rounded-full bg-lime-400/10 blur-[150px]" />
+    <div className="relative h-full overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.055] p-5 shadow-[0_0_60px_rgba(217,255,47,.045)] backdrop-blur-[30px] sm:p-6">
+      {/* BACKGROUND GLOWS */}
 
-      <div className="container-custom relative z-10 px-3 sm:px-6 lg:px-0">
-        {/* CASE STUDY CARD */}
+      <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-lime-400/10 blur-[90px]" />
+
+      <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-lime-400/8 blur-[100px]" />
+
+      {/* HEADER */}
+
+      <div className="relative z-10 mb-5 flex items-start justify-between gap-4">
+        <div>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-lime-400">
+            Website Experience
+          </p>
+
+          <h3 className="mt-2 text-2xl font-black leading-tight sm:text-3xl">
+            Your Business
+            <br />
+            <span className="gradient-text">
+              With A Better Website
+            </span>
+          </h3>
+        </div>
+
         <div
           className="
-            relative grid overflow-hidden rounded-[30px]
-            border border-white/10
-            bg-white/[0.06]
-            shadow-[0_0_60px_rgba(217,255,47,.05)]
-            backdrop-blur-[40px]
-            lg:grid-cols-2
+            flex
+            h-12
+            w-12
+            shrink-0
+            items-center
+            justify-center
+            rounded-2xl
+            border
+            border-lime-400/20
+            bg-lime-400/10
+            text-lime-400
           "
         >
-          {/* CENTER DIVIDER */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px bg-white/10 lg:block" />
+          <FaGlobe />
+        </div>
+      </div>
 
-          <div
-            className="
-              absolute left-1/2 top-1/2 hidden
-              h-40 w-[1.5px]
-              -translate-x-1/2 -translate-y-1/2
-              bg-gradient-to-b from-transparent via-lime-400/30 to-transparent
-              blur-[1px]
-              lg:block
-            "
-          />
+      <p className="relative z-10 text-sm leading-relaxed text-gray-400">
+        Your website should do more than simply exist online. We build
+        modern, responsive experiences designed to make your business
+        look professional, communicate your value clearly, and turn
+        visitors into customers.
+      </p>
 
-          {/* EDGE GLOW LINES */}
-          <div className="absolute left-1/2 top-0 h-[1.5px] w-40 -translate-x-1/2 bg-gradient-to-r from-transparent via-lime-400/70 to-transparent blur-[1px]" />
-          <div className="absolute bottom-0 left-1/2 h-[1.5px] w-40 -translate-x-1/2 bg-gradient-to-r from-transparent via-lime-400/70 to-transparent blur-[1px]" />
-          <div className="absolute left-0 top-1/2 h-40 w-[1.5px] -translate-y-1/2 bg-gradient-to-b from-transparent via-lime-400/70 to-transparent blur-[1px]" />
-          <div className="absolute right-0 top-1/2 h-40 w-[1.5px] -translate-y-1/2 bg-gradient-to-b from-transparent via-lime-400/70 to-transparent blur-[1px]" />
+      {/* BROWSER MOCKUP */}
 
-          {/* CORNER SOFT GLOWS */}
-          <div className="pointer-events-none absolute left-1/2 top-0 h-20 w-56 -translate-x-1/2 bg-lime-400/8 blur-[60px]" />
-          <div className="pointer-events-none absolute bottom-0 left-1/2 h-20 w-56 -translate-x-1/2 bg-lime-400/8 blur-[60px]" />
-          <div className="pointer-events-none absolute left-0 top-1/2 h-56 w-20 -translate-y-1/2 bg-lime-400/6 blur-[60px]" />
-          <div className="pointer-events-none absolute right-0 top-1/2 h-56 w-20 -translate-y-1/2 bg-lime-400/6 blur-[60px]" />
+      <div className="relative z-10 mt-6">
+        {/* GLOW */}
 
-          {/* LEFT SIDE */}
-          <div className="relative z-10 p-6 lg:p-8">
-            <div className="glass mb-4 inline-flex items-center whitespace-nowrap rounded-full px-3 py-1.5 text-xs text-lime-400">
-              ✦ CASE STUDY
+        <div className="pointer-events-none absolute -inset-4 rounded-[30px] bg-lime-400/8 blur-[45px]" />
+
+        <div className="relative rounded-2xl bg-gradient-to-br from-lime-400/35 via-white/10 to-transparent p-[1.5px]">
+          <div className="overflow-hidden rounded-2xl bg-[#0d1117]/95 shadow-[0_25px_70px_rgba(0,0,0,0.45)]">
+
+            {/* BROWSER BAR */}
+
+            <div className="flex items-center gap-2 border-b border-white/[0.06] bg-white/[0.045] px-3 py-2.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
+              <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
+              <span className="h-2.5 w-2.5 rounded-full bg-lime-400/70" />
+
+              <div className="ml-2 flex min-w-0 flex-1 items-center gap-2 rounded-full bg-white/[0.05] px-3 py-1.5 text-[10px] text-gray-500">
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-lime-400 shadow-[0_0_8px_rgba(217,255,47,.8)]" />
+
+                <span className="truncate">
+                  yourbusiness.com
+                </span>
+              </div>
             </div>
 
-            <h2 className="text-2xl font-black leading-tight sm:text-3xl">
-              Grocery E-commerce
-              <br />
-              <span className="gradient-text">
-                Website Experience
-              </span>
-            </h2>
+            {/* WEBSITE */}
 
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-gray-400">
-              We designed and built a complete grocery shopping experience
-              focused on intuitive product discovery, smooth navigation,
-              secure customer journeys, and a seamless path from browsing
-              to checkout.
-            </p>
+            <div className="relative p-3">
+              {/* WEBSITE GLOW */}
 
-            {/* FEATURES */}
-            <div className="mt-4 grid gap-2 sm:grid-cols-2">
-              {features.map((feature) => (
-                <div
-                  key={feature}
-                  className="flex items-center gap-2"
-                >
-                  <FaCheckCircle className="shrink-0 text-sm text-lime-400" />
+              <div className="pointer-events-none absolute left-1/2 top-0 h-28 w-3/4 -translate-x-1/2 bg-lime-400/10 blur-[55px]" />
 
-                  <span className="text-sm text-white/85">
-                    {feature}
-                  </span>
+              {/* NAV */}
+
+              <div className="relative mb-3 flex items-center justify-between">
+                <div className="flex items-center gap-1.5">
+                  <div className="h-2.5 w-2.5 rounded-full bg-lime-400" />
+                  <div className="h-2.5 w-12 rounded-full bg-white/30" />
                 </div>
-              ))}
-            </div>
 
-            {/* CTA */}
-            <Link
-              to="/case-studies"
-              className="
-                mt-5 flex w-full items-center justify-center gap-3
-                rounded-2xl
-                bg-lime-400
-                px-6 py-2.5
-                font-semibold
-                text-black
-                transition-all
-                hover:scale-[1.03]
-                hover:shadow-[0_0_30px_rgba(163,230,53,0.2)]
-                sm:w-fit
-              "
-            >
-              View Full Case Study
-              <FaArrowRight />
-            </Link>
-          </div>
+                <div className="hidden gap-2 sm:flex">
+                  <div className="h-1.5 w-8 rounded-full bg-white/15" />
+                  <div className="h-1.5 w-8 rounded-full bg-white/15" />
+                  <div className="h-1.5 w-8 rounded-full bg-white/15" />
+                  <div className="h-1.5 w-8 rounded-full bg-white/15" />
+                </div>
 
-          {/* RIGHT SIDE */}
-          <div className="relative z-10 flex items-center p-6 lg:p-8">
-            <div className="relative w-full">
-              {/* OUTER GLOW */}
-              <div className="pointer-events-none absolute -inset-4 rounded-[30px] bg-lime-400/10 blur-[60px]" />
-
-              <div className="relative rounded-2xl bg-gradient-to-br from-lime-400/40 via-white/10 to-transparent p-[1.5px]">
-                <div
+                <div className="h-6 w-6 rounded-full bg-white/[0.07]" />
+              </div>
+              <div className="relative overflow-hidden rounded-xl border border-white/[0.06] bg-black">
+                <img
+                  src="/casestudy.jpg"
+                  alt="Website showcase preview"
                   className="
-                    relative w-full overflow-hidden rounded-2xl
-                    bg-[#0d1117]/80
-                    shadow-[0_25px_70px_rgba(0,0,0,0.45)]
-                    backdrop-blur-[24px]
+                    block
+                    h-auto
+                    w-full
+                    object-cover
+                    object-top
                   "
-                >
-                  {/* BROWSER TOP BAR */}
-                  <div className="flex items-center gap-2 border-b border-white/[0.06] bg-white/[0.05] px-4 py-3">
-                    <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-lime-400/70" />
-
-                    <div className="ml-3 flex min-w-0 flex-1 items-center gap-1.5 rounded-full bg-white/[0.06] px-3 py-1 text-[11px] text-gray-400">
-                      <span className="h-2 w-2 shrink-0 rounded-full bg-lime-400 shadow-[0_0_8px_rgba(217,255,47,.8)]" />
-
-                      <span className="truncate">
-                        freshcart.app
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* MOCK WEBSITE */}
-                  <div className="relative p-3">
-                    <div className="pointer-events-none absolute left-1/2 top-0 h-16 w-3/4 -translate-x-1/2 bg-lime-400/10 blur-[50px]" />
-
-                    {/* NAVIGATION */}
-                    <div className="relative mb-2 flex items-center justify-between">
-                      <div className="h-2.5 w-14 rounded-full bg-lime-400/60" />
-
-                      <div className="flex gap-2">
-                        <div className="h-2 w-7 rounded-full bg-white/20" />
-                        <div className="h-2 w-7 rounded-full bg-white/20" />
-                        <div className="h-2 w-7 rounded-full bg-white/20" />
-                      </div>
-
-                      <div className="h-5 w-5 rounded-full bg-white/10" />
-                    </div>
-
-                    {/* HERO */}
-                    <div className="relative mb-2 overflow-hidden rounded-xl border border-white/[0.06] bg-gradient-to-br from-lime-400/15 to-transparent p-2.5">
-                      <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-lime-400/15 blur-[40px]" />
-
-                      <div className="mb-1.5 h-2.5 w-2/3 rounded-full bg-white/40" />
-
-                      <div className="mb-2 h-2 w-1/2 rounded-full bg-white/20" />
-
-                      <div className="h-5 w-16 rounded-lg bg-lime-400/80 shadow-[0_0_16px_rgba(217,255,47,.35)]" />
-                    </div>
-
-                    {/* PRODUCTS */}
-                    <div className="grid grid-cols-3 gap-2">
-                      {[1, 2, 3].map((item) => (
-                        <div
-                          key={item}
-                          className="
-                            rounded-lg
-                            border border-white/[0.06]
-                            bg-white/[0.05]
-                            p-1.5
-                            transition-transform
-                            hover:-translate-y-1
-                          "
-                        >
-                          <div className="mb-1.5 h-8 w-full rounded-md bg-white/[0.08]" />
-
-                          <div className="mb-1 h-1.5 w-3/4 rounded-full bg-white/20" />
-
-                          <div className="h-1.5 w-1/2 rounded-full bg-lime-400/60" />
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* BOTTOM SHOPPING ROW */}
-                    <div className="mt-2 flex items-center justify-between rounded-lg border border-white/[0.06] bg-white/[0.035] px-2.5 py-2">
-                      <div>
-                        <div className="mb-1 h-1.5 w-16 rounded-full bg-white/20" />
-                        <div className="h-1.5 w-10 rounded-full bg-lime-400/50" />
-                      </div>
-
-                      <div className="h-6 w-16 rounded-lg bg-lime-400/70" />
-                    </div>
-                  </div>
-                </div>
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10" />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      {/* FEATURES */}
+
+      <div className="relative z-10 mt-5 grid grid-cols-2 gap-2">
+        {features.map((feature) => (
+          <div
+            key={feature}
+            className="
+              flex
+              items-center
+              gap-2
+              rounded-xl
+              border
+              border-white/[0.06]
+              bg-white/[0.025]
+              px-3
+              py-2.5
+            "
+          >
+            <FaCheckCircle className="shrink-0 text-xs text-lime-400" />
+
+            <span className="text-xs leading-tight text-white/80">
+              {feature}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* CTA */}
+
+      <Link
+        to="/case-studies"
+        className="
+          relative
+          z-10
+          mt-6
+          flex
+          w-full
+          items-center
+          justify-center
+          gap-2
+          rounded-2xl
+          bg-lime-400
+          px-5
+          py-3
+          text-sm
+          font-semibold
+          text-black
+          transition-all
+          duration-300
+          hover:scale-[1.015]
+          hover:shadow-[0_0_30px_rgba(163,230,53,0.18)]
+        "
+      >
+        Explore Our Websites
+        <FaArrowRight className="text-xs" />
+      </Link>
+    </div>
   );
 }

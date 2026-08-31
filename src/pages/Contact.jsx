@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import MainLayout from "../layouts/MainLayout";
 import emailjs from "@emailjs/browser";
 
 import {
@@ -155,8 +154,6 @@ export default function Contact() {
           href="https://fluxfame.site/contact"
         />
       </Helmet>
-
-      <MainLayout>
         <div
           className="
             pt-28
@@ -648,7 +645,7 @@ export default function Contact() {
             </motion.div>
           </div>
         </div>
-      </MainLayout>
+     
     </>
   );
 }
