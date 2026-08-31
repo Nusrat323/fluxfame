@@ -7,61 +7,73 @@ export default function FAQ() {
     {
       question: "What services do you provide?",
       answer:
-        "We provide modern frontend website development, AI automation, GoHighLevel CRM setup, workflow automation, landing pages, AI chatbots, booking systems and custom digital solutions for businesses.",
+        "We create complete digital solutions for businesses, including modern websites, landing pages, AI automation, GoHighLevel CRM systems, AI chatbots, appointment booking, lead management and automated customer follow-ups.",
     },
 
     {
-      question: "Can you build custom business websites?",
+      question: "Can you build a complete website for my business?",
       answer:
-        "Yes. We build fast, responsive and modern frontend websites tailored to your business, whether it's a company website, landing page, portfolio or e-commerce frontend.",
+        "Yes. We build modern, responsive business websites tailored to your goals, brand and customers. Whether you need a company website, service-based website, landing page, e-commerce experience or a custom digital platform, we can build it around your business.",
     },
 
     {
       question: "What types of businesses do you work with?",
       answer:
-        "We work with startups, agencies, clinics, dental practices, gyms, coaching centers, real estate companies, beauty salons, e-commerce brands and many other service-based businesses.",
+        "We work with startups, agencies, clinics, dental practices, gyms, coaching centers, real estate companies, beauty businesses, e-commerce brands, credit repair companies and other service-based businesses.",
     },
 
     {
-      question: "Can you combine a website with AI automation?",
+      question: "Can you connect my website with AI automation?",
       answer:
-        "Absolutely. We can build your website and integrate it with AI chatbots, CRM systems, appointment booking, lead capture and automated follow-up workflows.",
+        "Absolutely. Your website can work together with AI chat assistants, lead capture, CRM pipelines, appointment booking and automated follow-ups, creating a smoother experience for both your customers and your team.",
     },
 
     {
       question: "Do I need GoHighLevel before working with you?",
       answer:
-        "No. If you're planning to use GoHighLevel, we'll help you choose the right plan, configure your account and build the complete system for your business.",
+        "No. If GoHighLevel is a good fit for your business, we can help set up the account, organize your CRM, build workflows and connect the system with your website and customer journey.",
     },
 
     {
       question: "How long does a project usually take?",
       answer:
-        "Project timelines depend on complexity. Most frontend websites take 3–10 days, while larger automation systems and custom solutions may take 1–3 weeks.",
+        "It depends on the scope of the project. A focused website or landing page can usually be completed within a few days, while larger websites, CRM setups and automation systems may take one to three weeks.",
     },
 
     {
-      question: "Will my website work on mobile devices?",
+      question: "Will my website work well on mobile devices?",
       answer:
-        "Yes. Every website we build is fully responsive and optimized to deliver a smooth experience across desktop, tablet and mobile devices.",
+        "Yes. Every website is designed to provide a smooth experience across desktop, tablet and mobile devices, with attention to layout, usability, speed and overall presentation.",
+    },
+
+    {
+      question: "Can you improve my existing website?",
+      answer:
+        "Yes. We can redesign outdated pages, improve the user experience, modernize the layout, improve responsiveness and connect your existing website with the tools and systems your business needs.",
+    },
+
+    {
+      question: "Can you integrate my existing business tools?",
+      answer:
+        "Yes. Depending on your requirements, we can connect your website and workflows with CRM platforms, calendars, booking systems, forms, payment solutions, communication tools and other third-party services.",
     },
 
     {
       question: "Do you offer ongoing support?",
       answer:
-        "Yes. We provide maintenance, updates, performance improvements and ongoing technical support after project delivery.",
+        "Yes. After launch, we can help with updates, improvements, troubleshooting, performance optimization and ongoing changes as your business grows.",
     },
 
     {
-      question: "Can you integrate with my existing tools?",
+      question: "How do you handle lead generation and follow-ups?",
       answer:
-        "Yes. We can integrate websites with CRM platforms, booking systems, forms, payment gateways, calendars and many third-party services depending on your requirements.",
+        "We can build a system where new inquiries are captured, organized in your CRM, qualified through automated conversations and followed up automatically. This helps reduce manual work and makes sure fewer leads are missed.",
     },
 
     {
       question: "How do we get started?",
       answer:
-        "Simply contact us with your project idea. We'll discuss your goals, recommend the best solution and provide a clear plan before development begins.",
+        "Simply contact us with your business goals and what you'd like to build. We'll understand your requirements, recommend the right approach and provide a clear plan before development begins.",
     },
   ];
 
@@ -70,7 +82,6 @@ export default function FAQ() {
   return (
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -111,7 +122,6 @@ export default function FAQ() {
             rounded-full
           "
         />
-
       </div>
 
       <div className="container-custom relative z-10">
@@ -198,9 +208,7 @@ export default function FAQ() {
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-4">
-
           {faqs.map((item, index) => {
-
             const isActive = active === index;
 
             return (
@@ -227,7 +235,6 @@ export default function FAQ() {
                 }}
                 className="relative"
               >
-
                 <motion.div
                   animate={{
                     borderColor: isActive
@@ -241,22 +248,16 @@ export default function FAQ() {
                     group
                     relative
                     overflow-hidden
-
                     rounded-[24px]
-
                     bg-white/[0.04]
                     backdrop-blur-[20px]
-
                     border
-
                     transition-all
                     duration-300
-
                     hover:bg-white/[0.055]
                     hover:border-lime-400/20
                   "
                 >
-
                   <motion.div
                     animate={{
                       width: isActive ? "55%" : "32%",
@@ -271,9 +272,7 @@ export default function FAQ() {
                       top-0
                       left-1/2
                       -translate-x-1/2
-
                       h-[1.5px]
-
                       bg-gradient-to-r
                       from-transparent
                       via-lime-400/70
@@ -301,7 +300,6 @@ export default function FAQ() {
                     "
                   />
 
-                 
                   <button
                     type="button"
                     onClick={() =>
@@ -313,15 +311,12 @@ export default function FAQ() {
                       w-full
                       px-5
                       py-5
-
                       flex
                       items-center
                       justify-between
-
                       text-left
                     "
                   >
-
                     <span
                       className={`
                         font-semibold
@@ -338,7 +333,6 @@ export default function FAQ() {
                       {item.question}
                     </span>
 
-                    {/* ICON */}
                     <motion.div
                       animate={{
                         rotate: isActive ? 180 : 0,
@@ -366,14 +360,10 @@ export default function FAQ() {
                         group-hover:bg-lime-400/15
                       "
                     >
-                      {isActive ? (
-                        <FaMinus />
-                      ) : (
-                        <FaPlus />
-                      )}
+                      {isActive ? <FaMinus /> : <FaPlus />}
                     </motion.div>
-
                   </button>
+
                   <AnimatePresence initial={false}>
                     {isActive && (
                       <motion.div
@@ -400,11 +390,7 @@ export default function FAQ() {
                         }}
                         className="overflow-hidden"
                       >
-
                         <div className="px-5 pb-5">
-
-                          {/* DIVIDER */}
-
                           <motion.div
                             initial={{
                               scaleX: 0,
@@ -451,12 +437,11 @@ export default function FAQ() {
                           >
                             {item.answer}
                           </motion.p>
-
                         </div>
-
                       </motion.div>
                     )}
                   </AnimatePresence>
+
                   <motion.div
                     animate={{
                       scaleX: isActive ? 1 : 0,
@@ -480,15 +465,11 @@ export default function FAQ() {
                       to-transparent
                     "
                   />
-
                 </motion.div>
-
               </motion.div>
             );
           })}
-
         </div>
-
       </div>
     </section>
   );

@@ -448,8 +448,30 @@ export default function Services() {
     <div className="relative overflow-hidden bg-[#080c08] text-white">
       <Background />
 
+      {/* =========================================================
+          HERO
+      ========================================================= */}
       <section className="relative z-10 px-4 pb-10 pt-36 sm:px-6 sm:pb-12 sm:pt-28 lg:px-8 lg:pb-14 lg:pt-32">
         <div className="mx-auto max-w-7xl">
+
+          {/* Ambient hero glow */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.7,
+            }}
+            animate={{
+              opacity: [0.04, 0.08, 0.04],
+              scale: [0.9, 1.05, 0.9],
+            }}
+            transition={{
+              duration: 7,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="pointer-events-none absolute left-1/2 top-[8%] h-[420px] w-[700px] -translate-x-1/2 rounded-full bg-lime-400 blur-[150px]"
+          />
+
           <motion.div
             initial="hidden"
             animate="visible"
@@ -457,26 +479,33 @@ export default function Services() {
               hidden: {},
               visible: {
                 transition: {
-                  staggerChildren: 0.08,
+                  staggerChildren: 0.1,
+                  delayChildren: 0.05,
                 },
               },
             }}
-            className="mx-auto max-w-4xl text-center"
+            className="relative mx-auto max-w-4xl text-center"
           >
+            {/* Eyebrow */}
             <motion.div
               variants={{
                 hidden: {
                   opacity: 0,
-                  y: 18,
-                  scale: 0.98,
+                  y: 22,
+                  scale: 0.94,
+                  filter: "blur(6px)",
                 },
                 visible: {
                   opacity: 1,
                   y: 0,
                   scale: 1,
+                  filter: "blur(0px)",
                 },
               }}
-              transition={{ duration: 0.45, ease }}
+              transition={{
+                duration: 0.65,
+                ease,
+              }}
               className="mb-5 inline-flex items-center gap-2 rounded-full border border-lime-400/20 bg-lime-400/[0.06] px-4 py-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-lime-300 backdrop-blur-xl sm:text-[10px]"
             >
               <motion.span
@@ -496,61 +525,132 @@ export default function Services() {
               What We Do
             </motion.div>
 
+            {/* =====================================================
+                MAIN TITLE
+            ===================================================== */}
             <motion.h1
               variants={{
-                hidden: {
-                  opacity: 0,
-                  y: 22,
-                },
+                hidden: {},
                 visible: {
-                  opacity: 1,
-                  y: 0,
+                  transition: {
+                    staggerChildren: 0.12,
+                    delayChildren: 0.12,
+                  },
                 },
               }}
-              transition={{ duration: 0.55, ease }}
-              className="text-[2.65rem] font-black leading-[0.96] tracking-[-0.06em] sm:text-6xl lg:text-[5.3rem]"
+              initial="hidden"
+              animate="visible"
+              className="relative text-[2.65rem] font-black leading-[0.96] tracking-[-0.06em] sm:text-6xl lg:text-[5.3rem]"
             >
-              Digital systems built for
-              <br />
-
-              <span className="relative inline-block bg-gradient-to-r from-lime-200 via-lime-400 to-green-400 bg-clip-text text-transparent">
-                real business growth
-
-                <motion.span
-                  initial={{
-                    scaleX: 0,
+              {/* First line */}
+              <motion.span
+                variants={{
+                  hidden: {
                     opacity: 0,
-                  }}
-                  animate={{
-                    scaleX: 1,
+                    y: 55,
+                    scale: 0.94,
+                    filter: "blur(10px)",
+                  },
+                  visible: {
                     opacity: 1,
-                  }}
-                  transition={{
-                    duration: 0.7,
-                    delay: 0.45,
-                    ease,
-                  }}
-                  className="absolute -bottom-2 left-0 h-[2px] w-full origin-left bg-gradient-to-r from-transparent via-lime-400/70 to-transparent blur-[1px]"
-                />
-              </span>
+                    y: 0,
+                    scale: 1,
+                    filter: "blur(0px)",
+                  },
+                }}
+                transition={{
+                  duration: 0.8,
+                  ease,
+                }}
+                className="block"
+              >
+                Digital systems built for
+              </motion.span>
+
+              {/* Second line */}
+              <motion.span
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    y: 55,
+                    scale: 0.94,
+                    filter: "blur(10px)",
+                  },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    filter: "blur(0px)",
+                  },
+                }}
+                transition={{
+                  duration: 0.85,
+                  ease,
+                }}
+                className="relative mt-1 inline-block"
+              >
+                <span className="relative inline-block bg-gradient-to-r from-lime-200 via-lime-400 to-green-400 bg-clip-text text-transparent">
+                  real business growth
+
+                  {/* Animated underline */}
+                  <motion.span
+                    initial={{
+                      scaleX: 0,
+                      opacity: 0,
+                    }}
+                    animate={{
+                      scaleX: 1,
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 1.05,
+                      ease,
+                    }}
+                    className="absolute -bottom-2 left-0 h-[2px] w-full origin-left bg-gradient-to-r from-transparent via-lime-400/80 to-transparent blur-[1px]"
+                  />
+
+                  {/* Moving shine */}
+                  <motion.span
+                    initial={{
+                      x: "-120%",
+                      opacity: 0,
+                    }}
+                    animate={{
+                      x: "120%",
+                      opacity: [0, 0.7, 0],
+                    }}
+                    transition={{
+                      duration: 1.3,
+                      delay: 1.2,
+                      ease: "easeInOut",
+                    }}
+                    className="pointer-events-none absolute inset-0 overflow-hidden bg-gradient-to-r from-transparent via-white/30 to-transparent bg-clip-text"
+                  />
+                </span>
+              </motion.span>
             </motion.h1>
 
+            {/* Description */}
             <motion.p
               variants={{
                 hidden: {
                   opacity: 0,
-                  y: 14,
+                  y: 24,
+                  filter: "blur(5px)",
                 },
                 visible: {
                   opacity: 1,
                   y: 0,
+                  filter: "blur(0px)",
                 },
               }}
               transition={{
-                duration: 0.45,
+                duration: 0.7,
+                delay: 0.15,
                 ease,
               }}
-              className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/40 sm:text-base"
+              className="mx-auto mt-7 max-w-2xl text-sm leading-7 text-white/40 sm:text-base"
             >
               From complete business websites to intelligent automation,
               we build digital systems that help you attract customers,
@@ -560,23 +660,26 @@ export default function Services() {
             </motion.p>
           </motion.div>
 
+          {/* Service tabs */}
           <motion.div
             initial={{
               opacity: 0,
-              y: 15,
-              scale: 0.98,
+              y: 25,
+              scale: 0.96,
+              filter: "blur(5px)",
             }}
             animate={{
               opacity: 1,
               y: 0,
               scale: 1,
+              filter: "blur(0px)",
             }}
             transition={{
-              duration: 0.45,
-              delay: 0.2,
+              duration: 0.7,
+              delay: 0.55,
               ease,
             }}
-            className="relative mx-auto mt-9 flex max-w-md rounded-2xl border border-white/[0.12] bg-white/[0.025] p-1.5 shadow-2xl backdrop-blur-xl"
+            className="relative mx-auto mt-10 flex max-w-md rounded-2xl border border-white/[0.12] bg-white/[0.025] p-1.5 shadow-2xl backdrop-blur-xl"
           >
             <motion.div
               animate={{
@@ -642,6 +745,9 @@ export default function Services() {
         </div>
       </section>
 
+      {/* =========================================================
+          DYNAMIC CONTENT
+      ========================================================= */}
       <AnimatePresence mode="wait">
         {isAutomation ? (
           <motion.div
