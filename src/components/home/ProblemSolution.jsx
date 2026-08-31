@@ -843,7 +843,7 @@ function SolutionCTA() {
       {/* Explore Services */}
 
       <Link
-        to="/about"
+        to="/services"
         className="group inline-flex items-center gap-2 text-sm font-semibold text-lime-300 transition-colors duration-300 hover:text-lime-200"
       >
         Explore Services
