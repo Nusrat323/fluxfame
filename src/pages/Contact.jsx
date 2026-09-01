@@ -79,8 +79,10 @@ export default function Contact() {
         "service_7tvjkl8",
         "template_9ywue23",
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          // These names must match the variables
+          // used inside your EmailJS template.
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
         },
         "6kjG_bAhyYIesSn81"
@@ -99,11 +101,11 @@ export default function Contact() {
           setSuccess(false);
         }, 3000);
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
         setSending(false);
       });
   };
-
 
   if (loading) {
     return (
@@ -139,8 +141,6 @@ export default function Contact() {
 
   return (
     <>
-      
-
       <Helmet>
         <title>Contact Us | FluxFame</title>
 
@@ -154,498 +154,493 @@ export default function Contact() {
           href="https://fluxfame.site/contact"
         />
       </Helmet>
-        <div
-          className="
-            pt-28
-            pb-20
-            px-4
-            md:px-10
-            max-w-6xl
-            mx-auto
-          "
+
+      <div
+        className="
+          pt-28
+          pb-20
+          px-4
+          md:px-10
+          max-w-6xl
+          mx-auto
+        "
+      >
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 35,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.8,
+            ease,
+          }}
+          className="text-center mb-14"
         >
-          
-          <motion.div
+          <h1
+            className="
+              text-4xl
+              md:text-5xl
+              font-bold
+              text-white
+            "
+          >
+            Get In Touch
+          </h1>
+
+          <motion.p
             initial={{
               opacity: 0,
-              y: 35,
+              y: 15,
             }}
             animate={{
               opacity: 1,
               y: 0,
             }}
             transition={{
-              duration: 0.8,
+              duration: 0.7,
+              delay: 0.2,
               ease,
             }}
-            className="text-center mb-14"
+            className="
+              mt-4
+              text-gray-400
+              max-w-2xl
+              mx-auto
+              leading-relaxed
+            "
           >
-            <h1
+            Let's build modern websites and smart automation
+            solutions that help your business grow.
+          </motion.p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-10">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="space-y-6"
+          >
+            {/* EMAIL */}
+
+            <motion.a
+              variants={itemVariants}
+              whileHover={{
+                y: -5,
+                transition: {
+                  duration: 0.25,
+                },
+              }}
+              href="mailto:fluxfame01@gmail.com"
               className="
-                text-4xl
-                md:text-5xl
-                font-bold
-                text-white
+                glass
+                p-6
+                rounded-2xl
+                border
+                border-white/10
+                block
+                hover:border-lime-400/40
+                hover:shadow-[0_0_25px_rgba(163,230,53,0.08)]
+                transition-all
+                duration-300
               "
             >
-              Get In Touch
-            </h1>
+              <div className="flex items-center gap-3">
+                <FaEnvelope className="text-lime-400" />
 
-            <motion.p
-              initial={{
-                opacity: 0,
-                y: 15,
+                <h3 className="font-semibold text-white">
+                  Email
+                </h3>
+              </div>
+
+              <p className="text-gray-400 mt-2">
+                fluxfame01@gmail.com
+              </p>
+            </motion.a>
+
+            {/* WHATSAPP */}
+
+            <motion.a
+              variants={itemVariants}
+              whileHover={{
+                y: -5,
+                transition: {
+                  duration: 0.25,
+                },
               }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 0.7,
-                delay: 0.2,
-                ease,
-              }}
+              href="https://wa.me/8801XXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
               className="
-                mt-4
-                text-gray-400
-                max-w-2xl
-                mx-auto
-                leading-relaxed
+                glass
+                p-6
+                rounded-2xl
+                border
+                border-white/10
+                block
+                hover:border-lime-400/40
+                hover:shadow-[0_0_25px_rgba(163,230,53,0.08)]
+                transition-all
+                duration-300
               "
             >
-              Let's build modern websites and smart automation
-              solutions that help your business grow.
-            </motion.p>
-          </motion.div>
+              <div className="flex items-center gap-3">
+                <FaWhatsapp className="text-lime-400" />
 
-          <div className="grid md:grid-cols-2 gap-10">
+                <h3 className="font-semibold text-white">
+                  WhatsApp
+                </h3>
+              </div>
 
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="space-y-6"
+              <p className="text-gray-400 mt-2">
+                Chat on WhatsApp
+              </p>
+            </motion.a>
+
+            {/* INSTAGRAM */}
+
+            <motion.a
+              variants={itemVariants}
+              whileHover={{
+                y: -5,
+                transition: {
+                  duration: 0.25,
+                },
+              }}
+              href="https://www.instagram.com/fluxfame01"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                glass
+                p-6
+                rounded-2xl
+                border
+                border-white/10
+                block
+                hover:border-lime-400/40
+                hover:shadow-[0_0_25px_rgba(163,230,53,0.08)]
+                transition-all
+                duration-300
+              "
             >
+              <div className="flex items-center gap-3">
+                <FaInstagram className="text-lime-400" />
 
-              {/* EMAIL */}
+                <h3 className="font-semibold text-white">
+                  Instagram
+                </h3>
+              </div>
 
-              <motion.a
-                variants={itemVariants}
-                whileHover={{
-                  y: -5,
-                  transition: {
-                    duration: 0.25,
-                  },
-                }}
-                href="mailto:fluxfame01@gmail.com"
-                className="
-                  glass
-                  p-6
-                  rounded-2xl
-                  border
-                  border-white/10
-                  block
-                  hover:border-lime-400/40
-                  hover:shadow-[0_0_25px_rgba(163,230,53,0.08)]
-                  transition-all
-                  duration-300
-                "
-              >
-                <div className="flex items-center gap-3">
-                  <FaEnvelope className="text-lime-400" />
+              <p className="text-gray-400 mt-2">
+                Visit Instagram Page
+              </p>
+            </motion.a>
 
-                  <h3 className="font-semibold text-white">
-                    Email
-                  </h3>
-                </div>
+            {/* FACEBOOK */}
 
-                <p className="text-gray-400 mt-2">
-                  fluxfame01@gmail.com
-                </p>
-              </motion.a>
+            <motion.a
+              variants={itemVariants}
+              whileHover={{
+                y: -5,
+                transition: {
+                  duration: 0.25,
+                },
+              }}
+              href="https://www.facebook.com/people/FluxFame/61590684362355/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                glass
+                p-6
+                rounded-2xl
+                border
+                border-white/10
+                block
+                hover:border-lime-400/40
+                hover:shadow-[0_0_25px_rgba(163,230,53,0.08)]
+                transition-all
+                duration-300
+              "
+            >
+              <div className="flex items-center gap-3">
+                <FaFacebook className="text-lime-400" />
 
-              {/* WHATSAPP */}
+                <h3 className="font-semibold text-white">
+                  Facebook
+                </h3>
+              </div>
 
-              <motion.a
-                variants={itemVariants}
-                whileHover={{
-                  y: -5,
-                  transition: {
-                    duration: 0.25,
-                  },
-                }}
-                href="https://wa.me/8801XXXXXXXXX"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  glass
-                  p-6
-                  rounded-2xl
-                  border
-                  border-white/10
-                  block
-                  hover:border-lime-400/40
-                  hover:shadow-[0_0_25px_rgba(163,230,53,0.08)]
-                  transition-all
-                  duration-300
-                "
-              >
-                <div className="flex items-center gap-3">
-                  <FaWhatsapp className="text-lime-400" />
+              <p className="text-gray-400 mt-2">
+                Visit Facebook Page
+              </p>
+            </motion.a>
 
-                  <h3 className="font-semibold text-white">
-                    WhatsApp
-                  </h3>
-                </div>
-
-                <p className="text-gray-400 mt-2">
-                  Chat on WhatsApp
-                </p>
-              </motion.a>
-
-              {/* INSTAGRAM */}
-
-              <motion.a
-                variants={itemVariants}
-                whileHover={{
-                  y: -5,
-                  transition: {
-                    duration: 0.25,
-                  },
-                }}
-                href="https://www.instagram.com/fluxfame01"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  glass
-                  p-6
-                  rounded-2xl
-                  border
-                  border-white/10
-                  block
-                  hover:border-lime-400/40
-                  hover:shadow-[0_0_25px_rgba(163,230,53,0.08)]
-                  transition-all
-                  duration-300
-                "
-              >
-                <div className="flex items-center gap-3">
-                  <FaInstagram className="text-lime-400" />
-
-                  <h3 className="font-semibold text-white">
-                    Instagram
-                  </h3>
-                </div>
-
-                <p className="text-gray-400 mt-2">
-                  Visit Instagram Page
-                </p>
-              </motion.a>
-
-              {/* FACEBOOK */}
-
-              <motion.a
-                variants={itemVariants}
-                whileHover={{
-                  y: -5,
-                  transition: {
-                    duration: 0.25,
-                  },
-                }}
-                href="https://www.facebook.com/people/FluxFame/61590684362355/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  glass
-                  p-6
-                  rounded-2xl
-                  border
-                  border-white/10
-                  block
-                  hover:border-lime-400/40
-                  hover:shadow-[0_0_25px_rgba(163,230,53,0.08)]
-                  transition-all
-                  duration-300
-                "
-              >
-                <div className="flex items-center gap-3">
-                  <FaFacebook className="text-lime-400" />
-
-                  <h3 className="font-semibold text-white">
-                    Facebook
-                  </h3>
-                </div>
-
-                <p className="text-gray-400 mt-2">
-                  Visit Facebook Page
-                </p>
-              </motion.a>
-
-              {/* LOCATION */}
-
-              <motion.div
-                variants={itemVariants}
-                whileHover={{
-                  y: -5,
-                  transition: {
-                    duration: 0.25,
-                  },
-                }}
-                className="
-                  glass
-                  p-6
-                  rounded-2xl
-                  border
-                  border-white/10
-                  hover:border-lime-400/40
-                  hover:shadow-[0_0_25px_rgba(163,230,53,0.08)]
-                  transition-all
-                  duration-300
-                "
-              >
-                <div className="flex items-center gap-3">
-                  <FaMapMarkerAlt className="text-lime-400" />
-
-                  <h3 className="font-semibold text-white">
-                    Location
-                  </h3>
-                </div>
-
-                <p className="text-gray-400 mt-2">
-                  USA • Worldwide Clients
-                </p>
-              </motion.div>
-
-            </motion.div>
+            {/* LOCATION */}
 
             <motion.div
-              initial={{
-                opacity: 0,
-                x: 45,
-              }}
-              animate={{
-                opacity: 1,
-                x: 0,
-              }}
-              transition={{
-                duration: 0.8,
-                delay: 0.25,
-                ease,
+              variants={itemVariants}
+              whileHover={{
+                y: -5,
+                transition: {
+                  duration: 0.25,
+                },
               }}
               className="
                 glass
-                p-8
-                rounded-3xl
+                p-6
+                rounded-2xl
                 border
                 border-white/10
-                h-fit
+                hover:border-lime-400/40
+                hover:shadow-[0_0_25px_rgba(163,230,53,0.08)]
+                transition-all
+                duration-300
               "
             >
-              <h2
+              <div className="flex items-center gap-3">
+                <FaMapMarkerAlt className="text-lime-400" />
+
+                <h3 className="font-semibold text-white">
+                  Location
+                </h3>
+              </div>
+
+              <p className="text-gray-400 mt-2">
+                USA • Worldwide Clients
+              </p>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 45,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.8,
+              delay: 0.25,
+              ease,
+            }}
+            className="
+              glass
+              p-8
+              rounded-3xl
+              border
+              border-white/10
+              h-fit
+            "
+          >
+            <h2
+              className="
+                text-2xl
+                font-semibold
+                text-white
+                mb-6
+              "
+            >
+              Send Message
+            </h2>
+
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-4"
+            >
+              {/* NAME */}
+
+              <motion.input
+                initial={{
+                  opacity: 0,
+                  y: 15,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.4,
+                  ease,
+                }}
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
                 className="
-                  text-2xl
-                  font-semibold
+                  w-full
+                  p-4
+                  rounded-xl
+                  bg-white/5
+                  border
+                  border-white/10
                   text-white
-                  mb-6
+                  placeholder:text-gray-500
+                  outline-none
+                  focus:border-lime-400
+                  transition-colors
+                  duration-300
+                "
+              />
+
+              {/* EMAIL */}
+
+              <motion.input
+                initial={{
+                  opacity: 0,
+                  y: 15,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.48,
+                  ease,
+                }}
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="
+                  w-full
+                  p-4
+                  rounded-xl
+                  bg-white/5
+                  border
+                  border-white/10
+                  text-white
+                  placeholder:text-gray-500
+                  outline-none
+                  focus:border-lime-400
+                  transition-colors
+                  duration-300
+                "
+              />
+
+              {/* MESSAGE */}
+
+              <motion.textarea
+                initial={{
+                  opacity: 0,
+                  y: 15,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.56,
+                  ease,
+                }}
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                rows="5"
+                className="
+                  w-full
+                  p-4
+                  rounded-xl
+                  bg-white/5
+                  border
+                  border-white/10
+                  text-white
+                  placeholder:text-gray-500
+                  outline-none
+                  focus:border-lime-400
+                  transition-colors
+                  duration-300
+                  resize-none
+                "
+              />
+
+              {/* BUTTON */}
+
+              <motion.button
+                initial={{
+                  opacity: 0,
+                  y: 15,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.64,
+                  ease,
+                }}
+                whileHover={
+                  !sending
+                    ? {
+                        scale: 1.02,
+                      }
+                    : {}
+                }
+                whileTap={
+                  !sending
+                    ? {
+                        scale: 0.98,
+                      }
+                    : {}
+                }
+                type="submit"
+                disabled={sending}
+                className="
+                  w-full
+                  bg-lime-400
+                  text-black
+                  font-semibold
+                  py-4
+                  rounded-xl
+                  transition-all
+                  duration-300
+                  hover:shadow-[0_0_25px_rgba(163,230,53,0.25)]
+                  disabled:opacity-60
+                  disabled:cursor-not-allowed
                 "
               >
-                Send Message
-              </h2>
+                {sending ? "Sending..." : "Send Message"}
+              </motion.button>
 
-              <form
-                onSubmit={handleSubmit}
-                className="space-y-4"
-              >
+              {/* SUCCESS */}
 
-                {/* NAME */}
-
-                <motion.input
+              {success && (
+                <motion.p
                   initial={{
                     opacity: 0,
-                    y: 15,
+                    y: 10,
                   }}
                   animate={{
                     opacity: 1,
                     y: 0,
                   }}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.4,
-                    ease,
-                  }}
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
                   className="
-                    w-full
-                    p-4
-                    rounded-xl
-                    bg-white/5
-                    border
-                    border-white/10
-                    text-white
-                    placeholder:text-gray-500
-                    outline-none
-                    focus:border-lime-400
-                    transition-colors
-                    duration-300
-                  "
-                />
-
-                {/* EMAIL */}
-
-                <motion.input
-                  initial={{
-                    opacity: 0,
-                    y: 15,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.48,
-                    ease,
-                  }}
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="
-                    w-full
-                    p-4
-                    rounded-xl
-                    bg-white/5
-                    border
-                    border-white/10
-                    text-white
-                    placeholder:text-gray-500
-                    outline-none
-                    focus:border-lime-400
-                    transition-colors
-                    duration-300
-                  "
-                />
-
-                {/* MESSAGE */}
-
-                <motion.textarea
-                  initial={{
-                    opacity: 0,
-                    y: 15,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.56,
-                    ease,
-                  }}
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="5"
-                  className="
-                    w-full
-                    p-4
-                    rounded-xl
-                    bg-white/5
-                    border
-                    border-white/10
-                    text-white
-                    placeholder:text-gray-500
-                    outline-none
-                    focus:border-lime-400
-                    transition-colors
-                    duration-300
-                    resize-none
-                  "
-                />
-
-                {/* BUTTON */}
-
-                <motion.button
-                  initial={{
-                    opacity: 0,
-                    y: 15,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.64,
-                    ease,
-                  }}
-                  whileHover={
-                    !sending
-                      ? {
-                          scale: 1.02,
-                        }
-                      : {}
-                  }
-                  whileTap={
-                    !sending
-                      ? {
-                          scale: 0.98,
-                        }
-                      : {}
-                  }
-                  type="submit"
-                  disabled={sending}
-                  className="
-                    w-full
-                    bg-lime-400
-                    text-black
-                    font-semibold
-                    py-4
-                    rounded-xl
-                    transition-all
-                    duration-300
-                    hover:shadow-[0_0_25px_rgba(163,230,53,0.25)]
-                    disabled:opacity-60
-                    disabled:cursor-not-allowed
+                    text-green-400
+                    text-sm
+                    text-center
+                    mt-2
                   "
                 >
-                  {sending ? "Sending..." : "Send Message"}
-                </motion.button>
-
-                {/* SUCCESS */}
-
-                {success && (
-                  <motion.p
-                    initial={{
-                      opacity: 0,
-                      y: 10,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    className="
-                      text-green-400
-                      text-sm
-                      text-center
-                      mt-2
-                    "
-                  >
-                    Message sent successfully!
-                  </motion.p>
-                )}
-
-              </form>
-            </motion.div>
-          </div>
+                  Message sent successfully!
+                </motion.p>
+              )}
+            </form>
+          </motion.div>
         </div>
-     
+      </div>
     </>
   );
 }
+
