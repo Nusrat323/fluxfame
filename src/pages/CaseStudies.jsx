@@ -1,6 +1,6 @@
-
 import { useEffect, useMemo, useState } from "react";
 import CaseStudyCard from "../components/case-studies/CaseStudyCard";
+import CaseStudySearch from "../components/common/CaseStudySearch";
 import AnimatedSection from "../components/common/AnimatedSection";
 
 import { caseStudies } from "../data/caseStudies";
@@ -24,6 +24,7 @@ const FILTERS = [
 export default function CaseStudies() {
   const [loading, setLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState("website");
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -36,12 +37,43 @@ export default function CaseStudies() {
   const activeIndex = FILTERS.findIndex(
     (filter) => filter.key === activeFilter
   );
+  const normalizeSearch = (text = "") => {
+    return text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]/g, "");
+  };
 
   const filteredStudies = useMemo(() => {
-    return caseStudies.filter(
-      (project) => project.category === activeFilter
-    );
-  }, [activeFilter]);
+    const query = normalizeSearch(searchQuery);
+
+    return caseStudies.filter((project) => {
+      const matchesCategory =
+        project.category === activeFilter;
+
+      if (!query) {
+        return matchesCategory;
+      }
+
+      const searchableText = normalizeSearch(
+        [
+          project.title,
+          project.subtitle,
+          project.description,
+          project.category,
+          ...(project.highlights || []),
+          ...(project.results || []),
+          ...(project.benefits || []),
+        ].join(" ")
+      );
+
+      return (
+        matchesCategory &&
+        searchableText.includes(query)
+      );
+    });
+  }, [activeFilter, searchQuery]);
 
   if (loading) {
     return (
@@ -373,6 +405,14 @@ export default function CaseStudies() {
             </div>
           </AnimatedSection>
 
+          {/* SEARCH */}
+
+          <CaseStudySearch
+            value={searchQuery}
+            onChange={setSearchQuery}
+            resultCount={filteredStudies.length}
+          />
+
           {/* FILTER TOGGLE */}
 
           <AnimatedSection
@@ -451,7 +491,7 @@ export default function CaseStudies() {
 
           {filteredStudies.length > 0 ? (
             <div
-              key={activeFilter}
+              key={`${activeFilter}-${searchQuery}`}
               className="
                 grid
                 lg:grid-cols-2
@@ -486,4 +526,3 @@ export default function CaseStudies() {
     </>
   );
 }
-

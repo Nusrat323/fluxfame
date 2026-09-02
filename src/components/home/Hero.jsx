@@ -51,7 +51,6 @@ export default function Hero() {
 function HeroContent() {
   return (
     <div className="relative z-10 text-center lg:text-left">
-     
       <motion.div
         initial={{
           opacity: 0,
@@ -78,7 +77,9 @@ function HeroContent() {
 
         <span>INTELLIGENT SYSTEMS FOR MODERN BUSINESS</span>
       </motion.div>
+
       <TypingHeadline />
+
       <motion.p
         initial={{
           opacity: 0,
@@ -95,12 +96,11 @@ function HeroContent() {
         }}
         className="mx-auto mt-6 max-w-xl text-sm leading-7 text-white/60 sm:text-base sm:leading-7 lg:mx-0"
       >
-        We build complete business websites, AI assistants, and automation
-        systems that help you capture leads, answer customers, book
-        appointments, and keep your business moving.
+        We help local businesses capture more leads, book more appointments,
+        automate follow-ups, and build a stronger online presence — so you can
+        grow your business without doing everything manually.
       </motion.p>
 
-     
       <motion.div
         initial={{
           opacity: 0,
@@ -117,7 +117,6 @@ function HeroContent() {
         }}
         className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start"
       >
-        
         <Link to="/contact" className="w-full sm:w-auto">
           <motion.div
             whileHover={{
@@ -145,7 +144,6 @@ function HeroContent() {
           </motion.div>
         </Link>
 
-       
         <Link to="/case-studies" className="w-full sm:w-auto">
           <motion.div
             whileHover={{
@@ -176,6 +174,7 @@ function HeroContent() {
     </div>
   );
 }
+
 function TypingHeadline() {
   return (
     <motion.h1
@@ -192,13 +191,11 @@ function TypingHeadline() {
       }}
       className="mx-auto max-w-3xl text-[2.35rem] font-black leading-[1.04] tracking-[-0.045em] text-white sm:text-5xl md:text-[3.8rem] lg:mx-0 lg:text-[4rem] xl:text-[4.25rem]"
     >
-      <HeadlineLine>AI Systems &amp;</HeadlineLine>
+      <HeadlineLine>Make Your Business Work</HeadlineLine>
 
-      <HeadlineLine>Websites That</HeadlineLine>
+      <HeadlineLine>Smarter Online With Better</HeadlineLine>
 
-      <HeadlineLine gradient>Automate Growth</HeadlineLine>
-
-      <HeadlineLine gradient>&amp; Operations</HeadlineLine>
+      <HeadlineLine gradient>Websites & AI Automation</HeadlineLine>
     </motion.h1>
   );
 }
@@ -521,8 +518,6 @@ function LeadCard() {
   );
 }
 
-
-
 function AutomationCard() {
   return (
     <motion.div
@@ -596,8 +591,6 @@ function WorkflowNode({ text, active = false }) {
   );
 }
 
-
-
 function AiAssistant() {
   return (
     <motion.div
@@ -660,8 +653,6 @@ function AiAssistant() {
     </motion.div>
   );
 }
-
-
 
 function LiveChat() {
   const conversations = [
@@ -859,8 +850,6 @@ function TypingIndicator() {
     </motion.div>
   );
 }
-
-
 
 function FloatingLead() {
   return (
