@@ -79,8 +79,7 @@ export default function Contact() {
         "service_7tvjkl8",
         "template_9ywue23",
         {
-          // These names must match the variables
-          // used inside your EmailJS template.
+          
           name: formData.name,
           email: formData.email,
           message: formData.message,
@@ -272,7 +271,7 @@ export default function Contact() {
                   duration: 0.25,
                 },
               }}
-              href="https://wa.me/8801XXXXXXXXX"
+              href="https://wa.me/8801605950629"
               target="_blank"
               rel="noopener noreferrer"
               className="
